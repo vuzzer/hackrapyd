@@ -15,7 +15,6 @@ $(() => {
       type: "GET",
       dataType: "json",
       success: (data) => {
-        console.log(data);
         displayCheckout(data.body.data.id);
       },
     });

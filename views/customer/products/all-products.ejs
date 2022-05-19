@@ -317,7 +317,7 @@
                   
                           <% } %>
                         </div>
-                          <a href="" class="btn btn-success w-100"><span class=" h4">COMMANDER </span> <span class=" h4">( $ <%= locals.cart.totalPrice %> )</span></a><br>
+                          <a href="" class="btn btn-success w-100 btn-price" data-price="<%= locals.cart.totalPrice %>"><span class=" h4">COMMANDER </span> <span class=" h4">( $ <%= locals.cart.totalPrice %> )</span></a><br>
                       <% } else { %>
                           <% for (const item of locals.cart.items) { %>
                               <div class="card card__item">
