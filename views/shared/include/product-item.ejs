@@ -1,0 +1,31 @@
+<div class="col mb-5">
+  <div class="card h-100 div2" style="box-shadow: none;border: 1px solid rgba(2, 69, 5, 0.3);">
+    <!-- Product image-->
+    <img
+    
+      class="card-img-top "
+      src="<%= product.thumbnail %>"
+      alt="<%= product.title %>"
+     
+    />
+    <!-- Product details-->
+    <div class="card-body p-1">
+      <div class="text-center">
+        <!-- Product name-->
+        <h5 class="fw-bolder"><%= product.title %></h5>
+        <!-- Product price-->
+        <%= product.price %> $
+        <p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+      </div>
+    </div>
+    <!-- Product actions-->
+    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+      <div class="text-center ">
+        <a class="btn btn-danger mt-auto add-to-cart" data-productid="<%= product.id %>" href="#" style="background-color: orangered;" id="add-to-cart">
+          <i class="fas fa-shopping-cart me-2"></i>
+          add Cart +</a>
+      </div>
+    </div>
+  </div>
+</div>
+

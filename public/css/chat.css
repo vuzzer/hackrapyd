@@ -1,0 +1,71 @@
+/* CHATBOT  ======== */
+.chatbot{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbot__support {
+    display: flex;
+    flex-direction: column;
+    background: #9772FB;
+    margin-bottom: 1rem;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbot--active{
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+}
+
+/* BUTTON */
+.chatbot__button{
+    text-align: right;
+}
+
+/* HEADER */
+.chatbot__header{
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbot__messages{
+   /*  margin-top: auto; */
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.message__item{
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+}
+
+.message__item--operator{
+    margin-left: auto;
+}
+
+/*
+    Card is placed at right
+*/
+.card__item{
+    margin-left:auto;
+}
+
+.message__item--visitor{
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbot__footer{
+    position: sticky;
+    bottom: 0;
+}

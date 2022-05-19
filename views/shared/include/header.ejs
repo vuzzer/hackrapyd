@@ -1,0 +1,87 @@
+
+        <!-- Navbar -->
+        <nav style="border-bottom: none;" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+              <a class="navbar-brand" href="/">
+                <img src="/images/navbar/logo.png" style="width: 90px; height: 60px;" /> <h1><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></h1>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+                  
+            
+            <div class="search-content mx-auto d-md-block d-none">
+                <div class="pseudo-search">
+                    <input type="text" placeholder="rechercher un produit..." autofocus required>
+                    
+                    <i class="fa fa-globe places"></i>
+                    <button class="fa fa-search" type="submit"></button>
+                  </div>
+            </div>
+            
+      
+              <div class="d-flex align-items-center navbar-item-contenair" >
+                   
+                <a class="text-reset me-5 navbar--link" href="/">
+                   <span class="d-none d-md-inline" >Accueil</span> 
+                
+                </a>
+      
+      
+      
+               <a class="text-reset me-5 navbar--link" href="/cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="d-none d-md-inline" >Mon panier <i id="panier"><span style="background-color:orangered;padding: 5px;border-radius: 5px; color: white;">
+                   <%= locals.cart.totalQuantity %> </span></i> </span> 
+  
+              </a>
+      
+              
+              <a class="text-reset me-5 navbar--link" href="/pages/connexion.html">
+                <span class="d-none d-md-inline" >Connexion</span> 
+            
+              </a>
+      
+                <div class="dropdown">
+                <a
+                    class="dropdown-toggle d-flex align-items-center hidden-arrow navbar--link"
+                    href="#"
+                    id="navbarDropdownMenuAvatar"
+                    role="button"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                <span class="d-none d-md-block text-dark" >Mon compte</span>
+                
+                </a>
+                <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                    
+                      <li>
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                        </li>
+                    <li>
+                    <a class="dropdown-item" href="#">Mes commandes</a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="#">Mon historique</a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="#">Deconnexion</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </div>
+          </nav>

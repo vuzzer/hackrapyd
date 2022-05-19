@@ -1,0 +1,55 @@
+
+       
+        <!--card des produit produit commander-->
+        <div class="card">
+            <div class="row">
+                <div class="col-md-1 btn-annuler-commande-conainer">
+                    
+                    <button class=" btn btn-annuler-commande">
+                    
+                        X
+                    </button>
+                </div>
+                <div class="col-md-2 img-container">
+                    <img src="<%= item.product.thumbnail %>" alt="<%= item.product.title %>"  class="img-fluid"/>
+                </div>
+
+                <div class="col-md-7 col-panier-detail">
+                    <h4 class="title">
+                        <%= item.product.title %>
+                    </h4>
+                    <div class="">
+                        <p class="card-text icons-stars">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+  
+                          </p>
+
+                    </div>
+                    <div class="pub-produit">
+                        <span>
+                            En très bon état 
+                        </span>
+                        <span>
+                            Garantie
+                        </span>
+                        <span>
+                            De la bonne matière
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-2 prix-produit">
+                    <p class="mt-md-0 mt-3">
+                        (<%= item.product.price.toFixed(2) %> Fcfa)
+                    </p>
+                </div>
+
+            </div>
+               
+        </div>
