@@ -150,7 +150,7 @@
             "",
             timestamp(),
             [
-              ["First Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()]
+              ["First Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()]
             ]
           ),
           Zuck.buildTimelineItem(
@@ -160,7 +160,7 @@
             "",
             timestamp(),
             [
-              ["Second Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+              ["Second Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
             ]
           ),
           Zuck.buildTimelineItem(
@@ -170,7 +170,7 @@
             "",
             timestamp(),
             [
-              ["Third Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+              ["Third Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
             ]
           ),
           Zuck.buildTimelineItem(
@@ -180,7 +180,7 @@
             "",
             timestamp(),
             [
-              ["Other Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+              ["Other Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
             ]
           ),
         ]
@@ -512,7 +512,7 @@ right: 25px;
         
            <h4 class="image-clignote" style="color: orangered; text-align: center;
            border: 2px solid orangered;
-           ">Flash Sale 10%, <span style='color: green;'>Buy in One Click</span>
+           ">Flash Sale 10%, <span style='color: green;'>Buy in Two Click</span>
           </h4>
        
         <img
@@ -534,10 +534,11 @@ right: 25px;
             
               <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
               -->
-                    <% i=1 }} %> 
+                  
                     
-                    <button class="btn btn-success" >Buy</button>
-        </div>
+                    <button class="btn btn-success btn-price" onclick="paid('<%= product.price -(( product.price *10)/100) %>')">Buy ( 2 Click)</button>
+                    <% i=1 }} %> 
+                   </div>
     </div>    
   </div>
 
@@ -550,7 +551,8 @@ right: 25px;
     
     <span class="close f-left">&times; </span> 
 
- 
+  
+
       <span id="some_div" class=" text-danger " style="font-size: 25px;" ></span>
     </p>
  <div class="container">
@@ -575,20 +577,13 @@ right: 25px;
                   <br>
                     
               </h5>
-<<<<<<< HEAD
-              <h4 style="" id="prixInfo"> </h4>
+              <h4 id="prixInfo"> </h4>
               <p id="descriptionInfo"></p>
           </div>         
         </div>
       </div>    
               <!--
                 <p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
-=======
-              <h4  id="prixInfo"> </h4>$
-             
-            
-              <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
->>>>>>> f9219f41065f076347e4f53aa6d3208aff4071d6
               -->
                     
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -657,7 +652,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-const myTimeout = setTimeout(adversiting, 31000);
+const myTimeout = setTimeout(adversiting, 3000);
 
 function adversiting()  {
   modal.style.display = "block";
@@ -694,7 +689,12 @@ window.onclick = function(event) {
 
   }
 </script>
-
+<script>
+  document.querySelectorAll('.storypay').forEach(item => {
+      item.innerHTML='fghjklkjhkjl'
+})
+ 
+ </script>
   
 
     <!-- Bootstrap core JS-->
@@ -765,6 +765,7 @@ window.onclick = function(event) {
     });
      
                 </script>
+            
 
   </body>
 </html>
