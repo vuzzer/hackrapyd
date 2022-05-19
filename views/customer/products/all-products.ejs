@@ -282,16 +282,16 @@
     <link rel="stylesheet" type="text/css" href="css/front.css">
     <link rel="stylesheet" type="text/css" href="css/typing.css">
 
-    <div class="chatbot " style="z-index: 10000000000000;">
-      <div class="chatbot__support scrollUp ">
+    <div class="chatbot " style="z-index: 10000000000000; ">
+      <div class="chatbot__support scrollUp " >
 
           <div class="chatbot__header">
               <div class="chatbot__image--header">
-                  <img src="" alt="" srcset="">
+                  <img style="border-radius: 20px;" src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" width="50" alt="" srcset="">
               </div>
               <div class="chatbot__content--header">
-                  <h3 class="chatbot__heading--header">Cateli</h3>
-                  <p class="chatbot__description--header">Cateli, votre smart operator</p>
+                  <h2 class="chatbot__heading--header">RapydBot</h2>
+                  <p class="chatbot__description--header h4">RapydBot, your Smart Operator</p>
               </div>
           </div>
 
@@ -306,14 +306,22 @@
                                   <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
                                   <div class="card-body">
                                       <div class="card-title h5"><%= item.product.title %></div>
-                                      <a href="#" class="btn btn-warning" data-price="<%= item.product.price %>">($<%= item.product.price.toFixed(2) %>)</a>
+                                      <a href="#" class="btn btn-outline-primary" data-price="<%= item.product.price %>"><span class="h5">$<%= item.product.price.toFixed(2) %></span></a>
+                                      <span style="font-size: 18px;" class="h3 badge badge-warning text-danger">&times;</span>
                                   </div>
+                               
                               </div>
+                              
                             </div>
+                            
                   
                           <% } %>
                         </div>
+<<<<<<< HEAD
                           <a  class="btn btn-primary mx-auto btn-price" data-price="<%= locals.cart.totalPrice %>">Acheter <%= locals.cart.totalPrice %></a>
+=======
+                          <a href="" class="btn btn-success w-100"><span class=" h4">COMMANDER </span> <span class=" h4">( $ <%= locals.cart.totalPrice %> )</span></a><br>
+>>>>>>> cba153816e29c4953a3e9401fd33a90502525863
                       <% } else { %>
                           <% for (const item of locals.cart.items) { %>
                               <div class="card card__item">
@@ -354,7 +362,7 @@
           </div>
 
           <div class="chatbot__button scrollUp" >
-              <button><img src="img/chatbox-icon.svg" /></button>
+              <button><img width="50" style="border-radius: 50px;" src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
           </div>
         </div>
           <style>
@@ -363,6 +371,13 @@
 position: fixed;
 bottom : 20px;
 right: 25px;
+
+
+}
+.scrollUp:first-child {
+  border:1px solid rgb(169, 165, 164);box-shadow: 10px 10px 54px 9px rgba(0,0,0,0.39);
+      -webkit-box-shadow: 10px 10px 54px 9px rgba(0,0,0,0.39);
+      -moz-box-shadow: 10px 10px 54px 9px rgba(0,0,0,0.39);
 
 }
 
@@ -530,7 +545,94 @@ right: 25px;
     </div>    
   </div>
 
+
+<!-- The Modal -->
+<div id="myModalInfo" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <span class="close f-left">&times; </span> 
+
+ 
+      <span id="some_div" class=" text-danger " style="font-size: 25px;" ></span>
+    </p>
+ 
+
+    <div class="modal-body">    
+    </div>
+
+        <img
+        id="imgInfo"
+        style="width: 100%;"
+        class="img-fluid "
+        src=""
+        alt=""
+  
+
+       
+      />
+     <div style="text-align: center;">
+                <h5 id="titleInfo" class="fw-bolder">
+                  <br>
+                    
+              </h5>
+              <h4 style="" id="prixInfo"> </h4>$
+             
+            
+              <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+              -->
+                    
+                    <button class="btn btn-success" >Buy</button>
+        </div>
+    </div>    
+  </div>
+
+
+
 </div>
+
+
+
+<script>
+  // Get the modal
+  var modalInfo = document.getElementById("myModalInfo");
+  
+  // Get the button that opens the modal
+  var btnInfo = document.getElementById("myBtnInfo");
+  
+  // Get the <span> element that closes the modal
+  var spanInfo = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+
+  
+  function adversitingInfo()  
+  {
+    modalInfo.style.display = "block";
+  }
+  
+  
+  function adversitingCloseInfo()  
+  {
+    modalInfo.style.display = "none";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  spanInfo.onclick = function() {
+    modalInfo.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modalInfo.style.display = "none";
+    }
+  }
+  </script>
+  
+    
+
 
 <script>
 // Get the modal
@@ -565,6 +667,18 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+</script>
+<script>
+  function detailsProduit(libelle,prix,photo)
+  {
+    alert(libelle + prix + photo)
+    document.getElementById("imgInfo").src=photo;
+    document.getElementById("prixInfo").innerHTML=prix;
+    document.getElementById("titleInfo").innerHTML=libelle;
+    modalInfo.style.display = "block";
+
+
+  }
 </script>
 
   
