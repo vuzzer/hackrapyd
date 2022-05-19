@@ -553,10 +553,10 @@ right: 25px;
  
       <span id="some_div" class=" text-danger " style="font-size: 25px;" ></span>
     </p>
- 
-
-    <div class="modal-body">    
-    </div>
+ <div class="container">
+<div class="row">
+    <div class="col-md-6">    
+   
 
         <img
         id="imgInfo"
@@ -568,18 +568,29 @@ right: 25px;
 
        
       />
-     <div style="text-align: center;">
-                <h5 id="titleInfo" class="fw-bolder">
+    </div>
+    <div class="col-md-6">
+    
+                <h5 id="titleInfo" class="fw-bolder" >
                   <br>
                     
               </h5>
-              <h4 style="" id="prixInfo"> </h4>$
-             
-            
-              <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+              <h4 style="" id="prixInfo"> </h4>
+              <p id="descriptionInfo"></p>
+          </div>         
+        </div>
+      </div>    
+              <!--
+                <p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
               -->
                     
-                    <button class="btn btn-success" >Buy</button>
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center ">
+                  <a class="btn btn-danger mt-auto add-to-cart " id="prodInfo" style="background-color: orangered; cursor: pointer;" >
+                    <i class="fas fa-shopping-cart me-2"></i>
+                    add Cart +</a>
+                </div>
+              </div>
         </div>
     </div>    
   </div>
@@ -588,7 +599,7 @@ right: 25px;
 
 </div>
 
-
+<script src="js/jquery/jquery.min.js"></script>
 
 <script>
   // Get the modal
@@ -598,7 +609,7 @@ right: 25px;
   var btnInfo = document.getElementById("myBtnInfo");
   
   // Get the <span> element that closes the modal
-  var spanInfo = document.getElementsByClassName("close")[0];
+  var spanInfo = document.getElementsByClassName("close")[1];
   
   // When the user clicks the button, open the modal 
 
@@ -620,11 +631,9 @@ right: 25px;
   }
   
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modalInfo.style.display = "none";
-    }
-  }
+ 
+
+ 
   </script>
   
     
@@ -665,12 +674,14 @@ window.onclick = function(event) {
 }
 </script>
 <script>
-  function detailsProduit(libelle,prix,photo)
+  function detailsProduit(libelle,prix,photo,description,prodId)
   {
-    alert(libelle + prix + photo)
+   
     document.getElementById("imgInfo").src=photo;
-    document.getElementById("prixInfo").innerHTML=prix;
+    document.getElementById("prixInfo").innerHTML=prix+'$';
     document.getElementById("titleInfo").innerHTML=libelle;
+    document.getElementById("descriptionInfo").innerHTML=description;
+    document.getElementById("prodInfo").setAttribute("data-productid", prodId);
     modalInfo.style.display = "block";
 
 
@@ -718,7 +729,7 @@ window.onclick = function(event) {
   
   -->
      
-  <script src="js/jquery/jquery.min.js"></script>
+ 
   <script src="/socket.io/socket.io.js"></script>
 
   <script src="js/operator/chat.js"></script>
