@@ -1,16 +1,17 @@
-const buttonBuy = document.querySelector('.btn.btn-warning');
-//const price = buttonBuy.dataset.price;
+const buttonBuy = document.querySelector('.btn-price');
+const price = buttonBuy.dataset.price;
 $(() => {
 
 
   //Enable checkout payment when user click on PAY
-  $(".btn.btn-warning").click((e) => {
+  $(".btn-price").click((e) => {
+    console.log('is running ...')
     e.preventDefault();
 
     $(".card.card__item").css({ display: "none" });
 
     $.ajax({
-      url: `http://localhost:3000/checkout/12`,
+      url: `http://localhost:3026/rapyd/checkout/${price}`,
       type: "GET",
       dataType: "json",
       success: (data) => {

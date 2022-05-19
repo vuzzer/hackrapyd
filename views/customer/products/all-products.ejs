@@ -313,14 +313,14 @@
                   
                           <% } %>
                         </div>
-                          <a href="" class="btn btn-primary">Acheter <%= locals.cart.totalPrice %></a>
+                          <a  class="btn btn-primary mx-auto btn-price" data-price="<%= locals.cart.totalPrice %>">Acheter <%= locals.cart.totalPrice %></a>
                       <% } else { %>
                           <% for (const item of locals.cart.items) { %>
                               <div class="card card__item">
                                   <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
                                   <div class="card-body">
                                       <div class="card-title h2"><%= item.product.title %></div>
-                                      <a href="#" class="btn btn-warning" data-price="<%= item.product.price %>">($<%= item.product.price.toFixed(2) %>)</a>
+                                      <a href="#" class="btn btn-warning btn-price" data-price="<%= item.product.price %>">($<%= item.product.price.toFixed(2) %>)</a>
                                   </div>
                               </div>
                           <% } %>
@@ -328,7 +328,7 @@
 
               </div>
           </div>
-
+        </div>
           <!-- Feedback -->
           <div class="row justify-content-center">
               <div class="col text-center my-4" style="display: none" id="feedback">
