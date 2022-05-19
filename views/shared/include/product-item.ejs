@@ -12,7 +12,7 @@
     <div class="card-body p-1">
       <div class="text-center">
         <!-- Product name-->
-        <h5 class="fw-bolder"><%= product.title %></h5>
+        <a href="#" onclick="detailsProduit('<%= product.title %>','<%= product.price %>','<%= product.thumbnail %>')"><h5 class="fw-bolder"><%= product.title %></h5></a>
         <!-- Product price-->
         <%= product.price %> $
         <p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
@@ -28,4 +28,6 @@
     </div>
   </div>
 </div>
+
+
 
