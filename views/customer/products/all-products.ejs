@@ -317,14 +317,14 @@
                   
                           <% } %>
                         </div>
-                          <a href="" class="btn btn-success w-100"><span class=" h4">COMMANDER </span> <span class=" h4">( $ <%= locals.cart.totalPrice %> )</span></a><br>
+                          <a href="" class="btn btn-success w-100 btn-price" data-price="<%= locals.cart.totalPrice %>"><span class=" h4">COMMANDER </span> <span class=" h4">( $ <%= locals.cart.totalPrice %> )</span></a><br>
                       <% } else { %>
                           <% for (const item of locals.cart.items) { %>
                               <div class="card card__item">
                                   <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
                                   <div class="card-body">
                                       <div class="card-title h2"><%= item.product.title %></div>
-                                      <a href="#" class="btn btn-warning" data-price="<%= item.product.price %>">($<%= item.product.price.toFixed(2) %>)</a>
+                                      <a href="#" class="btn btn-warning btn-price" data-price="<%= item.product.price %>">($<%= item.product.price.toFixed(2) %>)</a>
                                   </div>
                               </div>
                           <% } %>
@@ -332,7 +332,7 @@
 
               </div>
           </div>
-
+        </div>
           <!-- Feedback -->
           <div class="row justify-content-center">
               <div class="col text-center my-4" style="display: none" id="feedback">
@@ -575,6 +575,7 @@ right: 25px;
                   <br>
                     
               </h5>
+<<<<<<< HEAD
               <h4 style="" id="prixInfo"> </h4>
               <p id="descriptionInfo"></p>
           </div>         
@@ -582,6 +583,12 @@ right: 25px;
       </div>    
               <!--
                 <p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+=======
+              <h4  id="prixInfo"> </h4>$
+             
+            
+              <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+>>>>>>> f9219f41065f076347e4f53aa6d3208aff4071d6
               -->
                     
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
