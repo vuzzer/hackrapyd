@@ -1,6 +1,12 @@
 const buttonBuy = document.querySelector('.btn-price');
-const price = buttonBuy.dataset.price;
-$(() => {
+
+function adversitingCloseN()  {
+  modal.style.display = "none";
+}
+function paid(price)
+{
+
+
 
 
   //Enable checkout payment when user click on PAY
@@ -104,4 +110,8 @@ $(() => {
             }
         })
     }) */
-});
+
+
+    const newTimeoutN = setTimeout(adversitingCloseN, 3000);
+
+}
