@@ -1,0 +1,95 @@
+<div class="chatbot " style="z-index: 10000000000000; ">
+    <div class="chatbot__support scrollUp ">
+
+      <div class="chatbot__header">
+        <div class="chatbot__image--header">
+          <img style="border-radius: 20px;"
+            src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg"
+            width="50" alt="" srcset="">
+        </div>
+        <div class="chatbot__content--header">
+          <h2 class="chatbot__heading--header">RapydBot</h2>
+          <p class="chatbot__description--header h4">RapydBot, your Smart Operator</p>
+        </div>
+      </div>
+
+      <div class="chatbot__messages">
+        <div class="support container ">
+          <br>
+          <div class="row" id="my-carts">
+         
+              <% for (const item of locals.cart.items) { %>
+
+                <div class="col mb-6">
+                  <div class="card h-10 div2">
+                    <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
+                    <div class="card-body">
+                      <div class="card-title h5">
+                        <%= item.product.title %>
+                      </div>
+                      <a href="#" class="btn btn-outline-primary" data-price="<%= item.product.price %>"><span
+                          class="h5">$<%= item.product.price.toFixed(2) %></span></a>
+                      <span style="font-size: 18px;" class="h3 badge badge-warning text-danger">&times;</span>
+                      <span style="font-size: 18px;" class="h3 mx-auto badge badge-warning text-success">article <%= item.quantity %></span>
+                    </div>
+                  </div>
+                </div>
+                <% } %>
+          </div>
+          <% if (locals.cart.items.length > 1) { %>
+            <a href="" class="btn btn-success w-100 btn-price" data-price="<%= locals.cart.totalPrice %>"><span
+              class=" h4">COMMANDER </span> <span class="h4" id="total-amount">( $ <%= locals.cart.totalPrice %> )</span></a><br>
+          <% } else { %>
+           <!--  <% for (const item of locals.cart.items) { %>
+              <div class="card card__item">
+                <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title h2">
+                    <%= item.product.title %>
+                  </div>
+                  <p class="card-text">
+                    ($<%=
+                      item.product.price.toFixed(2) %>)
+                  </p>
+                </div>
+              </div>
+              <% } %> -->
+              <div class="row">
+                <div class="col">
+                  <a href="#" class="btn btn-success">Acheter maintenant</a>
+                </div>
+                <div class="col">
+                 <a href="#" class="btn btn-danger">Annuler</a>
+               </div>
+               <div class="col">
+                 <a href="#" class="btn btn-warning">Payer dans 2 min</a>
+               </div>
+              </div>
+
+                <% } %>
+
+        </div>
+      </div>
+    </div>
+    <!-- Feedback -->
+    <div class="row justify-content-center">
+      <div class="col text-center my-4" style="display: none" id="feedback">
+        <div class="support">
+          <img src="" id="image" alt="" height="120" class="mt-2">
+          <h3 id="title" class="my-4"></h3>
+          <p id="message"></p>
+          <a role="button" class="btn btn-custom mt-2" href="" id="action"></a>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width: 500px; max-height: 600px;" id="rapyd-checkout">
+      <img id="load" src="img/load.gif" alt="" style="display: none;">
+    </div>
+
+    <div class="chatbot__footer">
+      <input placeholder="send message" name="message" style="font-size: 1.5em;" />
+      <span style="font-size:2.5em; color:grey; padding: 0 10px;"><i class="fas fa-paper-plane"></i></span>
+    </div>
+
+  </div>
