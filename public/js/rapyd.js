@@ -8,7 +8,6 @@ function paid(price)
 
 
 
-
   //Enable checkout payment when user click on PAY
   $(".btn-price").click((e) => {
     console.log('is running ...')

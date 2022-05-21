@@ -13,7 +13,7 @@ chatbot.toggleIcon(false, chatButton);
 
 //Global variable
 let position_to_listen = { fexp: null, fzon: null, ftou: null, fposte: null };
-//let error_position = { fexp: null, fzon: null, ftou: null, fposte: null }
+
 
 //Mimic of smart for conversation
 let mimic_exploitation = /^(fexp|fzon|ftou|fposte)(\s)+([0-9])+$/i;

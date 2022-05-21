@@ -1,726 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
-    <title>Hack-Rapyd 2022</title>
-    <!-- Favicon-->
-      <!-- demo styles -->
-      <link rel="stylesheet" href="/demo/style.css">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-      <!-- lib styles -->
-      <link rel="stylesheet" href="/dist/stories.css">
-      
-      <!-- lib skins -->
-      <link rel="stylesheet" href="/dist/skins/snapgram.css">
-      <link rel="stylesheet" href="/dist/skins/vemdezap.css">
-      <link rel="stylesheet" href="/dist/skins/facesnap.css">
-      <link rel="stylesheet" href="/dist/skins/snapssenger.css">
+  <title>Hack-Rapyd 2022</title>
+  <!-- Favicon-->
+  <!-- demo styles -->
+  <link rel="stylesheet" href="/demo/style.css">
 
-    <link rel="icon" type="image/x-icon" href="/images/navbar/logo.png" />
+  <!-- lib styles -->
+  <link rel="stylesheet" href="/dist/stories.css">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
-    <!-- Bootstrap icons-->
-    <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
-    />
-   
- 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/css/styleA.css" rel="stylesheet" />
-    
+  <!-- lib skins -->
+  <link rel="stylesheet" href="/dist/skins/snapgram.css">
+  <link rel="stylesheet" href="/dist/skins/vemdezap.css">
+  <link rel="stylesheet" href="/dist/skins/facesnap.css">
+  <link rel="stylesheet" href="/dist/skins/snapssenger.css">
 
-  </head>
+  <link rel="icon" type="image/x-icon" href="/images/navbar/logo.png" />
 
-  <style>
- 
-   .image-clignote  {
-   animation-duration: .9s;
-   animation-name: clignoter;
-   animation-iteration-count: infinite;
-   transition: none;
-}
-@keyframes clignoter {
-  0%   { opacity:1; }
-  40%   {opacity:0; }
-  100% { opacity:1; }
-}
-  .storypay{
-    color: red;
-  }
-    .pub { color: orangered; text-align: center;
-           border: 2px solid orangered; font-size: 28px; }
-    /* The Modal (background) */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 10; /* Sit on top */
-      padding-top: 70px; /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-    
-    /* Modal Content */
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 30%;
-    }
-    
-    /* The Close Button */
-    .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    
-    .close:hover,
-    .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    </style>
-  <body>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Navigation-->
-    <%- include('../../shared/include/header') %>
+
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="/css/styleA.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/chat.css">
+  <link rel="stylesheet" type="text/css" href="css/front.css">
+  <link rel="stylesheet" type="text/css" href="css/typing.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+  <!-- Navigation-->
+  <%- include('../../shared/include/header') %>
     <!-- Header-->
-<div style="text-align: center;">
-  <marquee behavior="alternate" style="font-weight: bold;color: green;font-size: 20px;">WITH THE RAPYD API, TEST A NEW PAYMENT EXPERIENCE</marquee>
-  <div style="border-bottom: 1px solid orangered;border-top: 9px solid orangered;width: 100%;text-align: center;">
-    <div>
-          
+    <div style="text-align: center;">
+      <marquee behavior="alternate" style="font-weight: bold;color: green;font-size: 20px;">WITH THE RAPYD API, TEST A
+        NEW PAYMENT EXPERIENCE</marquee>
+      <div style="border-bottom: 1px solid orangered;border-top: 9px solid orangered;width: 100%;text-align: center;">
+        <div>
+          <span class='image-clignote pub'> News ==> <span className='storypay'>STORIES-PAY</span> = <span>Buy Articles
+              in Story in One Click </span> </span>
+          <Stories />
+        </div>
+        <div id="stories" class="storiesWrapper"></div>
 
 
-      <span class='image-clignote pub' > News ==> <span className='storypay'>STORIES-PAY</span> = <span>Buy Articles in Story in One Click </span> </span>
-           
-         
-                <Stories />
-  
-               
-              </div>
-    <div id="stories" class="storiesWrapper"></div>
+        <script src="dist/zuck.min.js"></script>
+        <script src="demo/script.js"></script>
 
 
-    <script src="dist/zuck.min.js"></script>
-    <script src="demo/script.js"></script>
-    
 
-   
-  <% for (const product of products) { %>
-
-    <script>
-      var currentSkin = getCurrentSkin();
-      var stories = new Zuck('stories', {
-        backNative: true,
-        previousTap: true,
-        skin: currentSkin['name'],
-        autoFullScreen: currentSkin['params']['autoFullScreen'],
-        avatars: currentSkin['params']['avatars'],
-        paginationArrows: currentSkin['params']['paginationArrows'],
-        list: currentSkin['params']['list'],
-        cubeEffect: currentSkin['params']['cubeEffect'],
-        localStorage: true,
-        stories: [
-          Zuck.buildTimelineItem(
-            "First Products", 
-            "<%= product.thumbnail %>",
-            "First Products",
-            "",
-            timestamp(),
-            [
-              ["First Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()]
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "Second Products", 
-            "https://www.versace.com/on/demandware.static/-/Sites-ver-master-catalog/default/dw28735fb5/original/90_R740111-R200MLS_RNUL_20_ErosEaudeParfum200ml-Fragrances-versace-online-store_0_2.jpg",
-            "Second Products",
-            "",
-            timestamp(),
-            [
-              ["Second Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "Third Products", 
-            "https://contents.mediadecathlon.com/p2175064/k$a323df0c88381a47cf8c79a3a38aeb5f/chaussure-jogging-homme-run-active-grip-gris-noir.jpg?&f=800x800",
-            "Third Products",
-            "",
-            timestamp(),
-            [
-              ["Third Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
-            ]
-          ),
-          Zuck.buildTimelineItem(
-            "Other Products", 
-            "https://www.cdiscount.com/pdt2/2/8/7/1/700x700/sha6087876265287/rw/montre-homme-marque-de-luxe-bracelet-acier-chronog.jpg",
-            "Other Products",
-            "",
-            timestamp(),
-            [
-              ["Other Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'products/<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
-            ]
-          ),
-        ]
-      });
-    </script>
+        <% for (const product of products) { %>
+          <script>
+            var currentSkin = getCurrentSkin();
+            var stories = new Zuck('stories', {
+              backNative: true,
+              previousTap: true,
+              skin: currentSkin['name'],
+              autoFullScreen: currentSkin['params']['autoFullScreen'],
+              avatars: currentSkin['params']['avatars'],
+              paginationArrows: currentSkin['params']['paginationArrows'],
+              list: currentSkin['params']['list'],
+              cubeEffect: currentSkin['params']['cubeEffect'],
+              localStorage: true,
+              stories: [
+                Zuck.buildTimelineItem(
+                  "First Products",
+                  "<%= product.thumbnail %>",
+                  "First Products",
+                  "",
+                  timestamp(),
+                  [
+                    ["First Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()]
+                  ]
+                ),
+                Zuck.buildTimelineItem(
+                  "Second Products",
+                  "https://www.versace.com/on/demandware.static/-/Sites-ver-master-catalog/default/dw28735fb5/original/90_R740111-R200MLS_RNUL_20_ErosEaudeParfum200ml-Fragrances-versace-online-store_0_2.jpg",
+                  "Second Products",
+                  "",
+                  timestamp(),
+                  [
+                    ["Second Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+                  ]
+                ),
+                Zuck.buildTimelineItem(
+                  "Third Products",
+                  "https://contents.mediadecathlon.com/p2175064/k$a323df0c88381a47cf8c79a3a38aeb5f/chaussure-jogging-homme-run-active-grip-gris-noir.jpg?&f=800x800",
+                  "Third Products",
+                  "",
+                  timestamp(),
+                  [
+                    ["Third Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+                  ]
+                ),
+                Zuck.buildTimelineItem(
+                  "Other Products",
+                  "https://www.cdiscount.com/pdt2/2/8/7/1/700x700/sha6087876265287/rw/montre-homme-marque-de-luxe-bracelet-acier-chronog.jpg",
+                  "Other Products",
+                  "",
+                  timestamp(),
+                  [
+                    ["Other Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+                  ]
+                ),
+              ]
+            });
+          </script>
+          <% } %>
 
 
-<% } %>
-
+      </div>
 
     </div>
-
-</div>
     <header class="bg-dark">
-   
-
       <!-- Carousel wrapper -->
       <div id="carouselBasicExample" class="carousel carousel-header  slide carousel-fade" data-mdb-ride="carousel">
         <!-- Indicators -->
         <div class="carousel-indicators">
-          <button
-            type="button"
-            data-mdb-target="#carouselBasicExample"
-            data-mdb-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-mdb-target="#carouselBasicExample"
-            data-mdb-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-mdb-target="#carouselBasicExample"
-            data-mdb-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+          <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2"
+            aria-label="Slide 3"></button>
         </div>
 
         <!-- Inner -->
         <div class="carousel-inner h-200">
           <!-- Single item -->
           <div class="carousel-item active">
-            <img src="/images/banner/2-carpenter-tools-banner-1.jpg" class="img-fluid d-block w-100" alt="Sunset Over the City"/>
-           
+            <img src="/images/banner/2-carpenter-tools-banner-1.jpg" class="img-fluid d-block w-100"
+              alt="Sunset Over the City" />
+
           </div>
 
           <!-- Single item -->
           <div class="carousel-item">
-            <img src="/images/banner/2-fashion-banner-1.jpg" class="img-fluid d-block w-100" alt="Canyon at Nigh"/>
-            
+            <img src="/images/banner/2-fashion-banner-1.jpg" class="img-fluid d-block w-100" alt="Canyon at Nigh" />
+
           </div>
 
           <!-- Single item -->
           <div class="carousel-item">
-            <img src="/images/banner/2-fashion-banner-2.jpg" class="img-fluid d-block w-100" alt="Cliff Above a Stormy Sea"/>
-          
+            <img src="/images/banner/2-fashion-banner-2.jpg" class="img-fluid d-block w-100"
+              alt="Cliff Above a Stormy Sea" />
+
           </div>
         </div>
         <!-- Inner -->
 
         <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample"
+          data-mdb-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample"
+          data-mdb-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
       <!-- Carousel wrapper -->
-
-
     </header>
-
-    
 
     <!-- Section-->
     <section class="py-5">
       <div class="container px-4 px-lg-5">
-        <h5 class="font-weight-bold text-muted text-uppercase py-3 text-center mb-3" >
+        <h5 class="font-weight-bold text-muted text-uppercase py-3 text-center mb-3">
           Products
         </h5>
-        <div
-          class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
-        >
-        <% for (const product of products) { %>
-          <%- include('../../shared/include/product-item' , {product: product}) %>
-          <% } %>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+          <% for (const product of products) { %>
+            <%- include('../../shared/include/product-item' , {product: product}) %>
+              <% } %>
     </section>
 
-   
+    <%- include('../../shared/include/rapydbot') %>
 
-    <link rel="stylesheet" type="text/css" href="css/chat.css">
-    <link rel="stylesheet" type="text/css" href="css/front.css">
-    <link rel="stylesheet" type="text/css" href="css/typing.css">
-
-    <div class="chatbot " style="z-index: 10000000000000; ">
-      <div class="chatbot__support scrollUp " >
-
-          <div class="chatbot__header">
-              <div class="chatbot__image--header">
-                  <img style="border-radius: 20px;" src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" width="50" alt="" srcset="">
-              </div>
-              <div class="chatbot__content--header">
-                  <h2 class="chatbot__heading--header">RapydBot</h2>
-                  <p class="chatbot__description--header h4">RapydBot, your Smart Operator</p>
-              </div>
-          </div>
-
-          <div class="chatbot__messages">
-              <div class="support container ">
-                <br> <div class="row">
-                      <% if (locals.cart.items.length > 1) { %>
-                          <% for (const item of locals.cart.items) { %>
-                        
-                            <div class="col mb-6">
-                              <div class="card h-10 div2">
-                                  <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
-                                  <div class="card-body">
-                                      <div class="card-title h5"><%= item.product.title %></div>
-                                      <a href="#" class="btn btn-outline-primary" data-price="<%= item.product.price %>"><span class="h5">$<%= item.product.price.toFixed(2) %></span></a>
-                                      <span style="font-size: 18px;" class="h3 badge badge-warning text-danger">&times;</span>
-                                  </div>
-                               
-                              </div>
-                              
-                            </div>
-                            
-                  
-                          <% } %>
-                        </div>
-                          <a href="" class="btn btn-success w-100 btn-price" data-price="<%= locals.cart.totalPrice %>"><span class=" h4">COMMANDER </span> <span class=" h4">( $ <%= locals.cart.totalPrice %> )</span></a><br>
-                      <% } else { %>
-                          <% for (const item of locals.cart.items) { %>
-                              <div class="card card__item">
-                                  <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
-                                  <div class="card-body">
-                                      <div class="card-title h2"><%= item.product.title %></div>
-                                      <a href="#" class="btn btn-warning btn-price" data-price="<%= item.product.price %>">($<%= item.product.price.toFixed(2) %>)</a>
-                                  </div>
-                              </div>
-                          <% } %>
-                      <% } %>
-
-              </div>
-          </div>
-        </div>
-          <!-- Feedback -->
-          <div class="row justify-content-center">
-              <div class="col text-center my-4" style="display: none" id="feedback">
-                  <div class="support">
-                      <img src="" id="image" alt="" height="120" class="mt-2">
-                      <h3 id="title" class="my-4"></h3>
-                      <p id="message"></p>
-                      <a role="button" class="btn btn-custom mt-2" href="" id="action"></a>
-                  </div>
-              </div>
-          </div>
-
-              <div style="max-width: 500px; max-height: 600px;" id="rapyd-checkout">
-                  <img id="load" src="img/load.gif" alt="" style="display: none;">
-              </div>
-
-              <div class="chatbot__footer">
-                  <input placeholder="send message" name="message" style="font-size: 1.5em;" />
-                  <span style="font-size:2.5em; color:grey; padding: 0 10px;"><i
-                          class="fas fa-paper-plane"></i></span>
-              </div>
-
-          </div>
-
-          <div class="chatbot__button scrollUp" >
-              <button><img width="50" style="border-radius: 50px;" src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
-          </div>
-        </div>
-          <style>
-            .scrollUp
-{
-position: fixed;
-bottom : 20px;
-right: 25px;
-
-
-}
-.scrollUp:first-child {
-  border:1px solid rgb(169, 165, 164);box-shadow: 10px 10px 54px 9px rgba(0,0,0,0.39);
-      -webkit-box-shadow: 10px 10px 54px 9px rgba(0,0,0,0.39);
-      -moz-box-shadow: 10px 10px 54px 9px rgba(0,0,0,0.39);
-
-}
-
-          </style>
-
-      
-
-          
-            
-  
-     <!-- footer -->
-     <footer class="footer text-center text-white">
-      <!-- Grid container -->
-      <div class="container p-4">
-     
-  
-      <!-- Section: Form -->
-      <section class="">
-          <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-              <!--Grid column-->
-              <div class="col-auto">
-              <p class="pt-2">
-                  <strong>
-                      Voulez-vous connaitre les nouveautés ? Entrer votre Email.
-                  </strong>
-              </p>
-              </div>
-              <!--Grid column-->
-  
-              <!--Grid column-->
-              <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                  <input type="email" id="form5Example21" class="form-control" />
-                  <label class="form-label" for="form5Example21">Votre email</label>
-              </div>
-              </div>
-              <!--Grid column-->
-  
-              <!--Grid column-->
-              <div class="col-auto">
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
-                  Envoyer
-              </button>
-              </div>
-              <!--Grid column-->
-          </div>
-          <!--Grid row-->
-          </form>
-      </section>
-      <!-- Section: Form -->
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-          <p>
-              La reference pour tous vos achats et ventes de produits et services sur Internet, efficace, sure avec des moyens de paiements simplifiés.
-          </p>
-      </section>
-      <!-- Section: Text -->
-  
-      <!-- Section: Links -->
-      <section class="">
-          <!--Grid row-->
-          <div class="row mx-auto text-center">
-          <!--Grid column-->
-          <div class="">
-              <h5 class="text-uppercase">Nos Contacts</h5>
-  
-              <ul class="list-unstyled mb-0">
-                  <li>
-                      <a href="#!" class="text-white">
-                          ngoransebastjunior@gmail.com
-                         
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#!" class="text-white">
-                        parfaitkouess@gmail.com
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#!" class="text-white">
-                       
-                      </a>
-                  </li>
-           
-              </ul>
-          </div>
-          <!--Grid column-->
-  
-          
-          </div>
-          <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
+      <div class="chatbot__button scrollUp">
+        <button><img width="50" style="border-radius: 50px;"
+            src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
       </div>
-      <!-- Grid container -->
-  
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="/"></a>
       </div>
-      <!-- Copyright -->
-  </footer>
-  <!-- fin footer -->
+      <style>
+        .scrollUp {
+          position: fixed;
+          bottom: 20px;
+          right: 25px;
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+        }
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    
-    <span class="close f-left">&times; </span> 
-    <p>   <span style="float: right;"> Adversiting</span> 
- 
-      <span id="some_div" class=" text-danger " style="font-size: 25px;" ></span>
-    </p>
- 
+        .scrollUp:first-child {
+          border: 1px solid rgb(169, 165, 164);
+          box-shadow: 10px 10px 54px 9px rgba(0, 0, 0, 0.39);
+          -webkit-box-shadow: 10px 10px 54px 9px rgba(0, 0, 0, 0.39);
+          -moz-box-shadow: 10px 10px 54px 9px rgba(0, 0, 0, 0.39);
 
-    <div class="modal-body">    
-    </div><% let i=0; for (const product of products ) {
-      
-      const productsId=[];
-       productsId.push(product.id);
-     
+        }
+      </style>
 
- 
 
-      if  (product.id==productsId[0] & i==0) {%>
+      <%- include('../../shared/include/footer') %>
+        <!-- fin footer -->
 
-        
-           <h4 class="image-clignote" style="color: orangered; text-align: center;
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+
+            <span class="close f-left">&times; </span>
+            <p> <span style="float: right;"> Adversiting</span>
+
+              <span id="some_div" class=" text-danger " style="font-size: 25px;"></span>
+            </p>
+
+
+            <div class="modal-body">
+            </div>
+            <% let i=0; for (const product of products ) { const productsId=[]; productsId.push(product.id); if
+              (product.id==productsId[0] & i==0) {%>
+
+
+              <h4 class="image-clignote" style="color: orangered; text-align: center;
            border: 2px solid orangered;
            ">Flash Sale 10%, <span style='color: green;'>Buy in Two Click</span>
-          </h4>
-       
-        <img
-        style="width: 100%;"
-        class="img-fluid "
-        src="<%= product.thumbnail %>"
-        alt="<%= product.title %>"
-  
+              </h4>
 
-       
-      />
-     <div style="text-align: center;">
+              <img style="width: 100%;" class="img-fluid " src="<%= product.thumbnail %>" alt="<%= product.title %>" />
+              <div style="text-align: center;">
                 <h5 class="fw-bolder">
-                  <br><%= product.title %>
-                    
-              </h5>
-              <h4 style="color: orangered;"><%= product.price -(( product.price *10)/100) %> $</h4>
-             <h6 style="text-decoration: line-through;"><%= product.price %> $</h6>
-            
-              <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
-              -->
-                  
-                    
-                    <button class="btn btn-success btn-price" onclick="paid('<%= product.price -(( product.price *10)/100) %>')">Buy ( 2 Click)</button>
-                    <% i=1 }} %> 
-                   </div>
-    </div>    
-  </div>
-
-
-<!-- The Modal -->
-<div id="myModalInfo" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    
-    <span class="close f-left">&times; </span> 
-
-  
-
-      <span id="some_div" class=" text-danger " style="font-size: 25px;" ></span>
-    </p>
- <div class="container">
-<div class="row">
-    <div class="col-md-6">    
-   
-
-        <img
-        id="imgInfo"
-        style="width: 100%;"
-        class="img-fluid "
-        src=""
-        alt=""
-  
-
-       
-      />
-    </div>
-    <div class="col-md-6">
-    
-                <h5 id="titleInfo" class="fw-bolder" >
                   <br>
-                    
-              </h5>
-              <h4 id="prixInfo"> </h4>
-              <p id="descriptionInfo"></p>
-          </div>         
-        </div>
-      </div>    
-              <!--
-                <p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+                  <%= product.title %>
+
+                </h5>
+                <h4 style="color: orangered;">
+                  <%= product.price -(( product.price *10)/100) %> $
+                </h4>
+                <h6 style="text-decoration: line-through;">
+                  <%= product.price %> $
+                </h6>
+
+                <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
               -->
-                    
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center ">
-                  <a class="btn btn-danger mt-auto add-to-cart " id="prodInfo" style="background-color: orangered; cursor: pointer;" >
-                    <i class="fas fa-shopping-cart me-2"></i>
-                    add Cart +</a>
+
+
+                <button class="btn btn-success btn-price"
+                  onclick="paid('<%= product.price -(( product.price *10)/100) %>')">Buy ( 2 Click)</button>
+                <% i=1 }} %>
+              </div>
+          </div>
+        </div>
+
+
+        <!-- The Modal -->
+        <div id="myModalInfo" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+
+            <span class="close f-left">&times; </span>
+
+
+
+            <span id="some_div" class=" text-danger " style="font-size: 25px;"></span>
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+
+
+                  <img id="imgInfo" style="width: 100%;" class="img-fluid " src="" alt="" />
+                </div>
+                <div class="col-md-6">
+
+                  <h5 id="titleInfo" class="fw-bolder">
+                    <br>
+
+                  </h5>
+                  <h4 id="prixInfo"> </h4>
+                  <p id="descriptionInfo"></p>
                 </div>
               </div>
+            </div>
+            <!--
+                <p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+              -->
+
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center ">
+                <a class="btn btn-danger mt-auto add-to-cart " id="prodInfo"
+                  style="background-color: orangered; cursor: pointer;">
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  add Cart +</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>    
-  </div>
+        </div>
 
 
 
-</div>
+        </div>
 
-<script src="js/jquery/jquery.min.js"></script>
+        <script src="js/jquery/jquery.min.js"></script>
 
-<script>
-  // Get the modal
-  var modalInfo = document.getElementById("myModalInfo");
-  
-  // Get the button that opens the modal
-  var btnInfo = document.getElementById("myBtnInfo");
-  
-  // Get the <span> element that closes the modal
-  var spanInfo = document.getElementsByClassName("close")[1];
-  
-  // When the user clicks the button, open the modal 
+        <script>
+          // Get the modal
+          var modalInfo = document.getElementById("myModalInfo");
 
-  
-  function adversitingInfo()  
-  {
-    modalInfo.style.display = "block";
-  }
-  
-  
-  function adversitingCloseInfo()  
-  {
-    modalInfo.style.display = "none";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  spanInfo.onclick = function() {
-    modalInfo.style.display = "none";
-  }
-  
+          // Get the button that opens the modal
+          var btnInfo = document.getElementById("myBtnInfo");
+
+          // Get the <span> element that closes the modal
+          var spanInfo = document.getElementsByClassName("close")[1];
+
+          // When the user clicks the button, open the modal 
+
+
+          function adversitingInfo() {
+            modalInfo.style.display = "block";
+          }
+
+
+          function adversitingCloseInfo() {
+            modalInfo.style.display = "none";
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          spanInfo.onclick = function () {
+            modalInfo.style.display = "none";
+          }
+
   // When the user clicks anywhere outside of the modal, close it
- 
-
- 
-  </script>
-  
-    
 
 
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-const myTimeout = setTimeout(adversiting, 3000);
-
-function adversiting()  {
-  modal.style.display = "block";
-}
-const newTimeout = setTimeout(adversitingClose, 47000);
-
-function adversitingClose()  {
-  modal.style.display = "none";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-<script>
-  function detailsProduit(libelle,prix,photo,description,prodId)
-  {
-   
-    document.getElementById("imgInfo").src=photo;
-    document.getElementById("prixInfo").innerHTML=prix+'$';
-    document.getElementById("titleInfo").innerHTML=libelle;
-    document.getElementById("descriptionInfo").innerHTML=description;
-    document.getElementById("prodInfo").setAttribute("data-productid", prodId);
-    modalInfo.style.display = "block";
+        </script>
 
 
-  }
-</script>
-<script>
-  document.querySelectorAll('.storypay').forEach(item => {
-      item.innerHTML='fghjklkjhkjl'
-})
- 
- </script>
-  
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
-<script src="/scripts/cart-management.js"></script>
-    <script>
-      var timeLeft = 45;
-    var elem = document.getElementById('some_div');
-    
-    var timerId = setInterval(countdown, 1000);
-    
-    function countdown() {
-      if (timeLeft == -1) {
-        clearTimeout(timerId);
-        doSomething();
-      } else {
-        elem.innerHTML = timeLeft + ' seconds remaining...';
-        timeLeft--;
-      }
-    }
-    </script>
 
-  <!--    
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks the button, open the modal 
+          const myTimeout = setTimeout(adversiting, 3000);
+
+          function adversiting() {
+            modal.style.display = "block";
+          }
+          const newTimeout = setTimeout(adversitingClose, 47000);
+
+          function adversitingClose() {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
+        <script>
+          function detailsProduit(libelle, prix, photo, description, prodId) {
+
+            document.getElementById("imgInfo").src = photo;
+            document.getElementById("prixInfo").innerHTML = prix + '$';
+            document.getElementById("titleInfo").innerHTML = libelle;
+            document.getElementById("descriptionInfo").innerHTML = description;
+            document.getElementById("prodInfo").setAttribute("data-productid", prodId);
+            modalInfo.style.display = "block";
+
+
+          }
+        </script>
+        <script>
+          document.querySelectorAll('.storypay').forEach(item => {
+            item.innerHTML = 'fghjklkjhkjl'
+          })
+
+        </script>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <!-- MDB -->
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+       
+        <script>
+          var timeLeft = 45;
+          var elem = document.getElementById('some_div');
+
+          var timerId = setInterval(countdown, 1000);
+
+          function countdown() {
+            if (timeLeft == -1) {
+              clearTimeout(timerId);
+              //doSomething();
+            } else {
+              elem.innerHTML = timeLeft + ' seconds remaining...';
+              timeLeft--;
+            }
+          }
+        </script>
+
+        <!--    
     <script>
         (function(){
             SDKName = window.SDKName || (window.SDKName = []);
@@ -735,37 +458,36 @@ window.onclick = function(event) {
     </script> 
   
   -->
-     
- 
-  <script src="/socket.io/socket.io.js"></script>
 
-  <script src="js/operator/chat.js"></script>
-  <script src="js/operator/botsocket.js"></script>
-  <script src="js/operator/language.js"></script>
-  
-  <script src="operator.js"></script>
-  
-  
-  <!-- code to display the iframe -->
-  <script src="https://sandboxcheckouttoolkit.rapyd.net"></script>
-  <script src="js/rapyd.js"></script>
 
-  <script>
-               
-    jQuery(function(){
-        $(function () {
-            $(window).scroll(function () { //Fonction appelée quand on descend la page
-                if ($(this).scrollTop() > 200 ) {  // Quand on est à 200pixels du haut de page,
-                    $('.scrollUp').css('right','10px'); // Replace à 10pixels de la droite l'image
-                } else { 
-                    $('.scrollUp').removeAttr( 'style' ); // Enlève les attributs CSS affectés par javascript
+        <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+        <script src="js/operator/chat.js"></script>
+        <script src="js/operator/botsocket.js"></script>
+        <script src="js/operator/language.js"></script>
+
+        <script src="operator.js"></script>
+
+        <script src="/scripts/cart-management.js"></script>
+
+        <!-- code to display the iframe RAPYD API -->
+        <script src="https://sandboxcheckouttoolkit.rapyd.net"></script>
+        <script src="js/rapyd.js"></script>
+
+        <script>
+
+          jQuery(function () {
+            $(function () {
+              $(window).scroll(function () { //Fonction appelée quand on descend la page
+                if ($(this).scrollTop() > 200) {  // Quand on est à 200pixels du haut de page,
+                  $('.scrollUp').css('right', '10px'); // Replace à 10pixels de la droite l'image
+                } else {
+                  $('.scrollUp').removeAttr('style'); // Enlève les attributs CSS affectés par javascript
                 }
+              });
             });
-        });
-    });
-     
-                </script>
-            
+          });
 
-  </body>
+        </script>
+</body>
+
 </html>
