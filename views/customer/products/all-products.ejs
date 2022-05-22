@@ -90,7 +90,7 @@
                   "",
                   timestamp(),
                   [
-                    ["First Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()]
+                    ["First Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()]
                   ]
                 ),
                 Zuck.buildTimelineItem(
@@ -100,7 +100,7 @@
                   "",
                   timestamp(),
                   [
-                    ["Second Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+                    ["Second Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
                   ]
                 ),
                 Zuck.buildTimelineItem(
@@ -110,7 +110,7 @@
                   "",
                   timestamp(),
                   [
-                    ["Third Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+                    ["Third Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
                   ]
                 ),
                 Zuck.buildTimelineItem(
@@ -120,7 +120,7 @@
                   "",
                   timestamp(),
                   [
-                    ["Other Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '#', 'Buy <%= product.price %> $', false, timestamp()],
+                    ["Other Products", "photo", 3, "<%= product.thumbnail %>", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", '<%= product.price %>', 'Buy <%= product.price %> $', false, timestamp()],
                   ]
                 ),
               ]
@@ -132,6 +132,7 @@
       </div>
 
     </div>
+    
     <header class="bg-dark">
       <!-- Carousel wrapper -->
       <div id="carouselBasicExample" class="carousel carousel-header  slide carousel-fade" data-mdb-ride="carousel">
@@ -198,17 +199,14 @@
 
     <%- include('../../shared/include/rapydbot') %>
 
-      <div class="chatbot__button scrollUp">
-        <button><img width="50" style="border-radius: 50px;"
-            src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
-      </div>
+
       </div>
       <style>
         .scrollUp {
           position: fixed;
           bottom: 20px;
           right: 25px;
-
+       
 
         }
 
@@ -217,6 +215,11 @@
           box-shadow: 10px 10px 54px 9px rgba(0, 0, 0, 0.39);
           -webkit-box-shadow: 10px 10px 54px 9px rgba(0, 0, 0, 0.39);
           -moz-box-shadow: 10px 10px 54px 9px rgba(0, 0, 0, 0.39);
+         
+
+        }
+        .chatbutt {
+          z-index: 10000000000000000000000000000000000000000;
 
         }
       </style>
@@ -230,7 +233,7 @@
         <div id="myModal" class="modal">
 
           <!-- Modal content -->
-          <div class="modal-content">
+          <div class="modal-content" style="width: 400px;">
 
             <span class="close f-left">&times; </span>
             <p> <span style="float: right;"> Adversiting</span>
@@ -247,7 +250,7 @@
 
               <h4 class="image-clignote" style="color: orangered; text-align: center;
            border: 2px solid orangered;
-           ">Flash Sale 10%, <span style='color: green;'>Buy in Two Click</span>
+           ">Flash Sale 10%, <span style='color: green;'>Buy in One Click</span>
               </h4>
 
               <img style="width: 100%;" class="img-fluid " src="<%= product.thumbnail %>" alt="<%= product.title %>" />
@@ -269,7 +272,7 @@
 
 
                 <button class="btn btn-success btn-price"
-                  onclick="paid('<%= product.price -(( product.price *10)/100) %>')">Buy ( 2 Click)</button>
+                  onclick="paid('<%= product.price -(( product.price *10)/100) %>')">Buy </button>
                 <% i=1 }} %>
               </div>
           </div>
@@ -280,7 +283,7 @@
         <div id="myModalInfo" class="modal">
 
           <!-- Modal content -->
-          <div class="modal-content">
+          <div class="modal-content" style="width: 400px;">
 
             <span class="close f-left">&times; </span>
 
