@@ -1,9 +1,9 @@
 
         <!-- Navbar -->
-        <nav style="border-bottom: none;" class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav style="border-bottom: none; font-size: 19px;" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
               <a class="navbar-brand" href="/">
-                <img src="/images/navbar/logo.png" style="width: 90px; height: 60px;" /> <h1><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></h1>
+                <img src="/images/navbar/logo.png" style="width: 90px; height: 60px;" /> <p class="h1"><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
               </a>
               <button
                 class="navbar-toggler"
@@ -20,10 +20,10 @@
                   
             
             <div class="search-content mx-auto d-md-block d-none">
-                <div class="pseudo-search">
-                    <input type="text" placeholder="rechercher un produit..." autofocus required>
+                <div class="pseudo-search" style="border: 2px solid orange;">
+                    <input  type="text" placeholder="Search products..." autofocus required>
                     
-                    <i class="fa fa-globe places"></i>
+                   
                     <button class="fa fa-search" type="submit"></button>
                   </div>
             </div>
@@ -32,24 +32,21 @@
               <div class="d-flex align-items-center navbar-item-contenair" >
                    
                 <a class="text-reset me-5 navbar--link" href="/">
-                   <span class="d-none d-md-inline" >Accueil</span> 
+                   <span class="d-md-inline" ><span class="fa fa-shop fs-20" style="color: dodgerblue;"></span> Shop</span> 
                 
                 </a>
       
       
       
-               <a class="text-reset me-5 navbar--link" href="/cart">
+               <a class="text-reset me-5 navbar--link" href="#">
                 <i class="fas fa-shopping-cart"></i>
-                <span class="d-none d-md-inline" >Mon panier <i ><span id="panier" style="background-color:orangered;padding: 5px;border-radius: 5px; color: white;">
+                <span class="d-md-inline" >Basket <i ><span id="panier" class="badge badge-danger fw-500" style="font-size: 18px;border: 1px solid orangered;">
                    <%= locals.cart.totalQuantity %> </span></i> </span> 
   
               </a>
       
               
-              <a class="text-reset me-5 navbar--link" href="/pages/connexion.html">
-                <span class="d-none d-md-inline" >Connexion</span> 
-            
-              </a>
+  
       
                 <div class="dropdown">
                 <a
@@ -60,7 +57,8 @@
                     data-mdb-toggle="dropdown"
                     aria-expanded="false"
                 >
-                <span class="d-none d-md-block text-dark" >Mon compte</span>
+                <span class="d-md-block text-dark" ><span class="fa fa-user"></span> 
+              Account</span>
                 
                 </a>
                 <ul
@@ -69,13 +67,13 @@
                 >
                     
                       <li>
-                        <a class="dropdown-item" href="#">Mon profil</a>
+                        <a class="dropdown-item" href="#">Profile</a>
                         </li>
                     <li>
-                    <a class="dropdown-item" href="#">Mes commandes</a>
+                    <a class="dropdown-item" href="#">Orders</a>
                     </li>
                     <li>
-                    <a class="dropdown-item" href="#">Mon historique</a>
+                    <a class="dropdown-item" href="#">Historic</a>
                     </li>
                     <li>
                     <a class="dropdown-item" href="#">Deconnexion</a>

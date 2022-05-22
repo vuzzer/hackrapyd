@@ -1,5 +1,14 @@
-<div class="chatbot " style="z-index: 10000000000000; ">
-    <div class="chatbot__support scrollUp ">
+<style>
+   .nw
+   {
+    width: 430px;
+    height: 550px;
+    margin-left: 45px;
+    }
+</style>
+
+<div class="chatbot " >
+    <div class="chatbot__support scrollUp nw" >
 
       <div class="chatbot__header">
         <div class="chatbot__image--header">
@@ -21,7 +30,7 @@
               <% for (const item of locals.cart.items) { %>
 
                 <div class="col mb-6">
-                  <div class="card h-10 div2">
+                  <div class="card h-10 div2 border border-muted">
                     <img src="<%= item.product.thumbnail %>" alt="" class="card-img-top">
                     <div class="card-body">
                       <div class="card-title h5">
@@ -70,6 +79,12 @@
 
         </div>
       </div>
+    
+     
+      <div class="chatbot__footer">
+        <input placeholder="send message" name="message" style="font-size: 1.5em;" />
+        <span style="font-size:2.5em; color:grey; padding: 0 10px;"><i class="fas fa-paper-plane"></i></span>
+      </div>
     </div>
     <!-- Feedback -->
     <div class="row justify-content-center">
@@ -83,13 +98,82 @@
       </div>
     </div>
 
-    <div style="max-width: 500px; max-height: 600px;" id="rapyd-checkout">
-      <img id="load" src="img/load.gif" alt="" style="display: none;">
-    </div>
 
-    <div class="chatbot__footer">
-      <input placeholder="send message" name="message" style="font-size: 1.5em;" />
-      <span style="font-size:2.5em; color:grey; padding: 0 10px;"><i class="fas fa-paper-plane"></i></span>
-    </div>
+
+ 
+  
+        
 
   </div>
+ 
+  <div class="chatbot__button scrollUp chatbutt" >
+    <button ><img width="50" style="border-radius: 50px;"
+        src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
+        <i class="badge badge-warning fw-500" style="font-size: 19px;border: 1px solid orangered; font-weight: 800;"><span id="panier" class="paniero"  data-nbp="<%= locals.cart.totalQuantity %>">
+         <%= locals.cart.totalQuantity %></span><span id="urgent" class="image-clignote " style="color:red;font-size: 25px;display: none;"> • </span></i> 
+      </div>
+
+
+
+
+
+
+
+<div id="ModalCheckOut" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="width: 400px;">
+
+          <span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
+          <p> <span style="float: right;"> Rapyd-Checkout</span>
+
+          
+          </p>
+
+
+          <div class="modal-body">
+    
+
+            <div class="" style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
+              <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
+            </div>
+
+          
+
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+      function urgencepanier(){
+        var nombrePanier = document.querySelector('.paniero').textContent;
+        var urgence = document.getElementById('urgent');
+     
+     
+        if(nombrePanier >0){
+          
+          urgence.style.display='inline';
+
+        }
+      }
+      urgencepanier();
+
+      window.addEventListener("click", function(event) {
+       
+        urgencepanier()
+});
+     
+      
+      </script>
