@@ -1,6 +1,10 @@
 const ModalCheckOut = document.querySelector('#ModalCheckOut');
 const storyModal = document.querySelector('#zuck-modal');
+const cartShops = document.querySelectorAll('#panier');
 
+$("#shop-cart").click(() => {
+  chatbot.onOrOff()
+});
 
 
 function adversitingCloseN()  {
@@ -19,15 +23,32 @@ function storyModalClose()
   storyModal.style.display="none";
 }
 
+async  function buy() {
+  try {
+    response = await fetch('/orders/buy', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  console.log(response);
+  } catch (error) {
+    alert('Something went wrong!');
+    return;
+  }
+  
+  if (!response.ok) {
+    alert('Something went wrong!');
+    return;
+  }
+}
+
+
 function paid(price)
 {
-
-
-
   //Enable checkout payment when user click on PAY
 
     $(".card.card__item").css({ display: "none" });
-
     $.ajax({
       url: `http://localhost:3026/rapyd/checkout/${price}`,
       type: "GET",
@@ -40,9 +61,6 @@ function paid(price)
     $("#load").css({ display: "block" });
     //setTimeout(display, 900);
   
-    
-
-
 
   $("#action").click((e) => {
     //Hide card product
@@ -52,7 +70,6 @@ function paid(price)
     $("#feedback").hide();
   });
 
-    
 
   function displayCheckout(idCheckout) {
     $("#load").css({ display: "none" });
@@ -72,15 +89,26 @@ function paid(price)
     checkout.displayCheckout();
 
     window.addEventListener("onCheckoutPaymentSuccess", function (event) {
-      console.log(event.detail);
+      //console.log(event.detail);
+
+      //Empty shopping cart
+      buy();
+      $("#my-carts").empty();
+      $(".button-buy").empty();
+
+      //Update item's number of shopping cart
+      for (const cartBadgeElement of cartShops) {
+        cartBadgeElement.textContent = 0;
+      } 
+
       feedback(event);
     });
     window.addEventListener("onCheckoutFailure", function (event) {
-      console.log(event.detail.error);
+      //console.log(event.detail.error);
       feedback(event);
     });
     window.addEventListener("onCheckoutPaymentFailure", (event) => {
-      console.log(event.detail.error);
+      //console.log(event.detail.error);
       feedback(event);
     });
   }

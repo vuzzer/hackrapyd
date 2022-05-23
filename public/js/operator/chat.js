@@ -21,6 +21,11 @@ class InteractiveChatbot {
         this.showOrHideChatbot(this.args.chatbot, this.args.button)
     }
 
+    onOrOff(){
+        this.state = !this.state;
+        this.showOrHideChatbot(this.args.chatbot, this.args.button)
+    }
+
     /**
      * Handle launching of chatbot support. 
      */

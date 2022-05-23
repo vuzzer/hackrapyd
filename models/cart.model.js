@@ -75,6 +75,18 @@ class Cart {
     this.totalPrice += product.price;
   }
 
+  removeItem(product) {
+    const items = this.items.filter(function (item) {
+      return item.product.id !== product.id;
+    });
+    this.items = items;
+
+    this.totalQuantity--;
+    this.totalPrice -= product.price;
+  }
+
+
+
   updateItem(productId, newQuantity) {
     for (let i = 0; i < this.items.length; i++) {
       const item = this.items[i];

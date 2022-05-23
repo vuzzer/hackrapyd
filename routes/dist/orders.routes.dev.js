@@ -1,9 +1,10 @@
-const express = require('express');
+"use strict";
 
-const ordersController = require('../controllers/orders.controller');
+var express = require('express');
 
-const router = express.Router();
+var ordersController = require('../controllers/orders.controller');
 
+var router = express.Router();
 router.post('/', ordersController.addOrder); // /orders
 
 router.get('/buy', ordersController.buy); // /orders/buy

@@ -1,7 +1,12 @@
 const Product = require('../models/product.model');
 
 async function getCart(req, res) {
-  res.render('customer/cart/cart');
+  const cart = res.locals.cart;
+  res.status(201).json({
+    message: 'Cart updated!',
+    newTotalItems: cart.totalQuantity,
+    cart: cart
+  });
 }
 
 async function addCartItem(req, res, next) {
@@ -37,6 +42,8 @@ function updateCartItem(req, res) {
 
   res.json({
     message: 'Item updated!',
+    cart: cart,
+    newTotalItems: cart.totalQuantity,
     updatedCartData: {
       newTotalQuantity: cart.totalQuantity,
       newTotalPrice: cart.totalPrice,
@@ -45,8 +52,32 @@ function updateCartItem(req, res) {
   });
 }
 
+
+async function removeCartItem(req, res, next) {
+  let product;
+  try {
+    product = await Product.findById(req.body.productId);
+  } catch (error) {
+    next(error);
+    return;
+  }
+
+  const cart = res.locals.cart;
+
+  cart.removeItem(product);
+  req.session.cart = cart;
+
+  res.status(201).json({
+    message: 'Cart updated!',
+    newTotalItems: cart.totalQuantity,
+    cart: cart
+  });
+}
+
+
 module.exports = {
   addCartItem: addCartItem,
   getCart: getCart,
   updateCartItem: updateCartItem,
+  removeCartItem: removeCartItem,
 };

@@ -50,7 +50,7 @@ app.use(authRoutes);
 app.use(productsRoutes);
 app.use('/rapyd', rapydRoutes)
 app.use('/cart', cartRoutes);
-app.use('/orders', protectRoutesMiddleware, ordersRoutes);
+app.use('/orders', ordersRoutes);
 app.use('/admin', protectRoutesMiddleware, adminRoutes);
 
 //Chat

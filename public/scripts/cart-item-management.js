@@ -4,13 +4,14 @@ const cartItemUpdateFormElements = document.querySelectorAll(
 const cartTotalPriceElement = document.getElementById('cart-total-price');
 const cartBadgeElements = document.querySelectorAll('.nav-items .badge');
 
+
+
 async function updateCartItem(event) {
   event.preventDefault();
 
   const form = event.target;
 
   const productId = form.dataset.productid;
-  const csrfToken = form.dataset.csrf;
   const quantity = form.firstElementChild.value;
 
   let response;
@@ -20,7 +21,6 @@ async function updateCartItem(event) {
       body: JSON.stringify({
         productId: productId,
         quantity: quantity,
-        _csrf: csrfToken,
       }),
       headers: {
         'Content-Type': 'application/json',

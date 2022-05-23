@@ -37,27 +37,11 @@ async function addOrder(req, res, next) {
 }
 
 async function buy(req, res, next) {
-  const cart = res.locals.cart;
-
-  let userDocument;
-  try {
-    userDocument = await User.findById(res.locals.uid);
-  } catch (error) {
-    return next(error);
-  }
-
-    const order = new Order(req.body.order.productData, req.body.order.userData, 'PAID');
-
-  try {
-    order.save();
-  } catch (error) {
-    next(error);
-    return;
-  }
-
   req.session.cart = null;
-
-  res.json({order: {productData: cart, userData: userDocument}});
+  console.log("sessions : "+req.session.cart);
+  res.status(201).json({
+    message: 'Buy successful!',
+  });
 }
 
 module.exports = {
