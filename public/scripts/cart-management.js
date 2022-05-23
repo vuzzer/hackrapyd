@@ -26,7 +26,8 @@ async function addToCart(productId) {
 
   const responseData = await response.json();
   const newTotalQuantity = responseData.newTotalItems;
-  if (parseInt(newTotalQuantity) === 1) {
+  if (parseInt(newTotalQuantity)=== 1) {
+    RemindBlock();
     chatbot.push();
   }
 

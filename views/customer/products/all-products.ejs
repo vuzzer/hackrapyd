@@ -14,7 +14,8 @@
 
   <!-- lib styles -->
   <link rel="stylesheet" href="/dist/stories.css">
-
+  <link rel="stylesheet" href="/css/ttt.css">
+  
   <!-- lib skins -->
   <link rel="stylesheet" href="/dist/skins/snapgram.css">
   <link rel="stylesheet" href="/dist/skins/vemdezap.css">
@@ -32,7 +33,7 @@
   <!-- Bootstrap icons-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="/css/styleA.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="css/chat.css">
@@ -43,9 +44,35 @@
 
 </head>
 
+
 <style>
 
+  .zoom {
+
+
+  transition: transform .2s;
+  box-shadow: none;
+  border: 1px solid rgba(2, 69, 5, 0.3);
+  -webkit-box-shadow: 5px 5px 15px -7px #dedbcb; 
+box-shadow: 5px 5px 15px -7px #cac8bd;
+
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+  border: 1px solid orangered;
+  -webkit-box-shadow: 5px 5px 15px -7px #dedbcb; 
+box-shadow: 5px 5px 15px -7px #cac8bd;
+
+}
+
 </style>
+
+  
+
+
 
 <body>
 
@@ -61,7 +88,7 @@
               in Story in One Click </span> </span>
           <Stories />
         </div>
-        <div id="stories" class="storiesWrapper"></div>
+        <div id="stories" class="storiesWrapper" ></div>
 
 
         <script src="dist/zuck.min.js"></script>
@@ -208,6 +235,14 @@
           right: 25px;
        
 
+          
+        }
+        .gaming {
+          position: fixed;
+          top: 20px;
+          right: 0px;
+       
+
         }
 
         .scrollUp:first-child {
@@ -219,7 +254,7 @@
 
         }
         .chatbutt {
-          z-index: 10000000000000000000000000000000000000000;
+          z-index: 123457;
 
         }
       </style>
@@ -233,7 +268,7 @@
         <div id="myModal" class="modal">
 
           <!-- Modal content -->
-          <div class="modal-content" style="width: 400px;">
+          <div class="modal-content" style="">
 
             <span class="close f-left">&times; </span>
             <p> <span style="float: right;"> Adversiting</span>
@@ -280,6 +315,7 @@
 
 
         <!-- The Modal -->
+        
         <div id="myModalInfo" class="modal">
 
           <!-- Modal content -->
@@ -378,7 +414,7 @@
           var span = document.getElementsByClassName("close")[0];
 
           // When the user clicks the button, open the modal 
-          const myTimeout = setTimeout(adversiting, 3000);
+          const myTimeout = setTimeout(adversiting, 31000);
 
           function adversiting() {
             modal.style.display = "block";
@@ -491,6 +527,143 @@
           });
 
         </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        
+<script> 
+          
+  var timeInput = document.getElementById('timeId'); 
+  var timeR;
+  timeInput.addEventListener("change", function(){
+    timeR = document.getElementById('timeId').value; 
+ 
+  });
+ 
+</script>
+<script>
+
+  function displayBot()
+  {
+    document.getElementById('bot').classList.remove('chatbot--active')
+  }
+
+  function RemindBlock()
+    {
+      
+      document.getElementById('ModalFirstAdd').style.display='block'
+    }
+
+    function RemindNone()
+    {
+      document.getElementById('ModalFirstAdd').style.display='none'
+    }
+
+  function RemindLater(timeLater)
+    {
+      if(timeLater==undefined | timeLater <0.005 )
+      {
+      alert('Add Correct Remind Time')
+      }
+      else
+      {
+    
+      
+      var timeInMinute = timeLater*60000;
+      const ModalRemindNone = setTimeout(RemindNone, 50);
+      const timeLaterRemind = setTimeout(RemindBlock, timeInMinute);
+      document.getElementById('timeId').value="";
+      displayBot()
+      
+      }
+    }
+    function Ordered()
+    {
+      
+      const ModalRemindNone = setTimeout(RemindNone, 50);
+      chatbot.push()
+     
+      
+
+    }
+</script>
+
+
+
+
+
+<script>
+  var i = 0;
+  var k = 0;
+  var j = 0;
+  var txt = 'Hello, I am';
+  var txt0 = 'RapydBot';
+  var txt1='You have just added ';
+  var speed = 70;
+  
+  function typeWriter() {
+    if (i < txt.length | j < txt0.length |  k < txt1.length) {
+      document.getElementById("typeW").innerHTML += txt.charAt(i);
+      document.getElementById("typeW0").innerHTML += txt0.charAt(j);
+      document.getElementById("typeW1").innerHTML += txt1.charAt(k);
+      i++;
+      k++;
+      j++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  typeWriter()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+      function urgencepanier(){
+        var nombrePanier = document.querySelector('.paniero').textContent;
+        var urgence = document.getElementById('urgent');
+     
+     
+        if(nombrePanier >0){
+          
+          urgence.style.display='inline';
+
+        }
+      }
+      urgencepanier();
+
+      window.addEventListener("click", function(event) {
+       
+        urgencepanier()
+});
+     
+      
+      </script>
+      <script>
+        function GameBlock()
+          {
+            
+            document.getElementById('ModalGame').style.display='block'
+          }
+      
+          function GameNone()
+          {
+            document.getElementById('ModalGame').style.display='none'
+          }
+      
+      </script>
+        <script src="/js/ttt.js"></script>
+        
 </body>
 
 </html>
