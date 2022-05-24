@@ -190,9 +190,11 @@
    
 
     <div class="modal-body text-center " style="font-size: 19px;">
-      <p id="welGame">Welcome to Play <span class="text-success">Tic-Tac-Toe</span>, if you Win, you will get <span class="text-warning">10% reductions</span>. </p>
+      <p id="welGame">Welcome to Play <span class="text-success">Tic-Tac-Toe</span>, if you Win, you will get <span class="text-warning">30% reductions</span>. </p>
    
-      <div id="ttt-game"></div>
+      <div id="ttt-game">
+       
+      </div>
     
 
       </div>
@@ -213,7 +215,7 @@
 
           <h4 class="image-clignote" style="color: orangered; text-align: center;
        border: 2px solid orangered;
-       ">10% OF REDUCTION, <span style='color: green;'>YOU WON</span>
+       ">30% OF REDUCTION, <span style='color: green;'>YOU WON</span>
           </h4>
 
           <img style="width: 100%;" class="img-fluid " src="<%= product.thumbnail %>" alt="<%= product.title %>" />
@@ -224,7 +226,7 @@
 
             </h5>
             <h4 style="color: orangered;">
-              <%= product.price -(( product.price *10)/100) %> $
+              <%= product.price -(( product.price *30)/100) %> $
             </h4>
             <h6 style="text-decoration: line-through;">
               <%= product.price %> $
