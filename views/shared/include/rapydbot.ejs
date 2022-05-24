@@ -6,8 +6,8 @@
   }
 </style>
 
-<div class="chatbot " >
-    <div class="chatbot__support scrollUp nw" id="bot" >
+<div class="chatbot ">
+  <div class="chatbot__support scrollUp nw" id="bot">
 
     <div class="chatbot__header">
       <div class="chatbot__image--header">
@@ -37,17 +37,18 @@
                   <a href="#" class="btn btn-outline-primary" data-price="<%= item.product.price %>"><span class="h5">$
                       <%= item.product.price.toFixed(2) %>
                     </span></a>
-                  <span style="font-size: 18px;cursor:pointer;" onclick="delToCart('<%= item.product.id %>')" class="h3 badge badge-warning text-danger">&times;</span>
+                  <span style="font-size: 18px;cursor:pointer;" onclick="delToCart('<%= item.product.id %>')"
+                    class="h3 badge badge-warning text-danger">&times;</span>
 
                   <button class="btn" onclick="add('<%= item.quantity %>','<%= item.product.id %>')">
                     <i class="fa-solid fa-plus"></i>
-                </button>
+                  </button>
 
                   <span style="font-size: 18px;" class="h3 mx-auto badge badge-warning text-success">article <%=
                       item.quantity %></span>
 
                   <button class="btn" onclick="minus('<%= item.quantity %>','<%= item.product.id %>')">
-                      <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-minus"></i>
                   </button>
                 </div>
               </div>
@@ -59,7 +60,9 @@
           <% if (locals.cart.items.length> 0) { %>
             <a href="#" class="btn btn-success w-100" onclick="paid('<%= locals.cart.totalPrice %>')"
               data-price="<%= locals.cart.totalPrice %>"><span class=" h4">Buy</span> <span class="h4"
-                id="total-amount"><%= locals.cart.totalPrice %>$</span></a>
+                id="total-amount">
+                <%= locals.cart.totalPrice %>$
+              </span></a>
             <% } %>
         </div>
       </div>
@@ -75,98 +78,88 @@
 </div>
 
 
+<div class="chatbot__button scrollUp chatbutt">
+  <button><img width="50" style="border-radius: 50px;"
+      src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
+  <i class="badge badge-warning fw-500" style="font-size: 19px;border: 1px solid orangered; font-weight: 800;"><span
+      id="panier" class="paniero" data-nbp="<%= locals.cart.totalQuantity %>">
+      <%= locals.cart.totalQuantity %>
+    </span><span id="urgent" class="image-clignote " style="color:red;font-size: 25px;display: none;"> • </span></i>
+</div>
 
 
-  </div>
- 
-  <div class="chatbot__button scrollUp chatbutt"  >
-    <button ><img width="50" style="border-radius: 50px;"
-        src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
-        <i class="badge badge-warning fw-500" style="font-size: 19px;border: 1px solid orangered; font-weight: 800;"><span id="panier" class="paniero"  data-nbp="<%= locals.cart.totalQuantity %>">
-         <%= locals.cart.totalQuantity %></span><span id="urgent" class="image-clignote " style="color:red;font-size: 25px;display: none;"> • </span></i> 
-  </div>
-
-    <span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
-    <p> <span style="float: right;"> Rapyd-Checkout</span>
-
-
-    </p>
-
-
-  <!-- Modal CheckOut -->
-
+<span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
+<p> <span style="float: right;"> Rapyd-Checkout</span></p>
+<!-- Modal CheckOut -->
 <div id="ModalCheckOut" class="modal" style="z-index:77777777;">
-        <div class="modal-content" >
-          
-          <div  style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
-            <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
-          </div>
+  <div class="modal-content">
+
+    <div style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
+      <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
     </div>
   </div>
 </div>
-
+</div>
 
 
 <!-- Modal Remind Action -->
 <div id="ModalFirstAdd" class="modal" style="display: none;">
 
-  <div class="modal-content" >
-
-  
-   
-
+  <div class="modal-content">
     <div class="modal-body text-center " style="font-size: 19px;">
 
-      <img src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" style="width: 50px;"/>
-      
-      <p><span id="typeW"> </span> <span id="typeW0" style='color: dodgerblue;' > </span> your Smart Agent, </p>
-      <p><span id="typeW1"> </span><span style='color: orangered;' >  <!--<%= locals.cart.totalQuantity +1 %> -->  product(s) </span>  to your cart. </p>
-      <p>You wish now :  </p>
+      <img src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg"
+        style="width: 50px;" />
+
+      <p><span id="typeW"> </span> <span id="typeW0" style='color: dodgerblue;'> </span> your Smart Agent, </p>
+      <p><span id="typeW1"> </span><span style='color: orangered;'>
+          <!--<%= locals.cart.totalQuantity +1 %> --> product(s)
+        </span> to your cart. </p>
+      <p>You wish now : </p>
       <p><button onclick="Ordered()" class="btn btn-success">Order</button>
-         <button class="btn btn-primary" onclick="RemindLater(parseFloat('e'))"> Continue shopping </button> Or    </p>
-   
+        <button class="btn btn-primary" onclick="RemindLater(parseFloat('e'))"> Continue shopping </button> Or
+      </p>
+
       <div>
         <p><button onclick="RemindLater(5)" class="btn btn-warn"> Remind me ( 5mn. ) </button> Or</p>
-        <form class="form-group" >
-          <input  class="form-control" type="number" name="" id="timeId" placeholder="Enter Remind Time (min.)">
-      
-
-        
-          <a onclick="RemindLater(timeR)" class="btn btn-warning mt-2" >Remind Me</a>
+        <form class="form-group">
+          <input class="form-control" type="number" name="" id="timeId" placeholder="Enter Remind Time (min.)">
+          <a onclick="RemindLater(timeR)" class="btn btn-warning mt-2">Remind Me</a>
         </form>
       </div>
-    
-
-      </div>
-
+    </div>
   </div>
 </div>
 
 <!-- Modal Game -->
 <div id="ModalGame" class="modal" style="display: none;">
-  
-  <div class="modal-content" >
+
+  <div class="modal-content" style="">
 
     <span onclick="GameNone()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
-   
+
 
     <div class="modal-body text-center " style="font-size: 19px;">
-      <p id="welGame">Welcome to Play <span class="text-success">Tic-Tac-Toe</span>, if you Win, you will get <span class="text-warning">30% reductions</span>. </p>
-   
+      <p id="welGame">Welcome to Play <span class="text-success">Tic-Tac-Toe</span>, if you Win, you will get <span
+          class="text-warning">30% reductions</span>. </p>
+
       <div id="ttt-game">
-       
-      </div>
-    
 
       </div>
-      <p id="principle"><span class="text-danger">Principle :</span> Take turns playing in the spaces of the grids with X or O by clicking on a grid. The player who succeeds in placing three of his marks in a horizontal, vertical or diagonal row is the winner.</p>
 
-      <div id="loading" style="display: none;">  <img id="load" src="img/load.gif" alt="" style="width: 200px;text-align: center;"></div>
 
-      <div id="p-game" style="display: none;">
-      <div >
+    </div>
+    <p id="principle"><span class="text-danger">Principle :</span> Take turns playing in the spaces of the grids with X
+      or O by clicking on a grid. The player who succeeds in placing three of his marks in a horizontal, vertical or
+      diagonal row is the winner.</p>
 
-       
+    <div id="loading" style="display: none;"> <img id="load" src="img/load.gif" alt=""
+        style="width: 200px;text-align: center;"></div>
+
+    <div id="p-game" style="display: none;">
+      <div>
+
+
 
         <div class="modal-body">
         </div>
@@ -203,13 +196,14 @@
           </div>
       </div>
     </div>
-      </div>
-    </div>
-     
-  
-
-
-<div class="chatbot__button  gaming" id="playbutton" style="z-index:777 ;" >
-  <button onclick="GameBlock()" class="text-white" style="font-size: 19px;font-weight: bold;border-top-right-radius: 0px;">PLAY <span class="fa fa-gamepad text-white image-clignote"> </span></button>
+  </div>
 </div>
 
+
+
+
+<div class="chatbot__button  gaming" id="playbutton" style="z-index:777 ;">
+  <button onclick="GameBlock()" class="text-white"
+    style="font-size: 19px;font-weight: bold;border-top-right-radius: 0px;">PLAY <span
+      class="fa fa-gamepad text-white image-clignote"> </span></button>
+</div>
