@@ -6,13 +6,8 @@
   }
 </style>
 
-<<<<<<< HEAD
-<div class="chatbot ">
-  <div class="chatbot__support scrollUp nw">
-=======
 <div class="chatbot " >
     <div class="chatbot__support scrollUp nw" id="bot" >
->>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
     <div class="chatbot__header">
       <div class="chatbot__image--header">
@@ -79,22 +74,9 @@
 
 </div>
 
-<div class="chatbot__button scrollUp chatbutt">
-  <button><img width="50" style="border-radius: 50px;"
-      src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
-  <i class="badge badge-warning fw-500" style="font-size: 19px;border: 1px solid orangered; font-weight: 800;"><span
-      id="panier" class="paniero" data-nbp="<%= locals.cart.totalQuantity %>">
-      <%= locals.cart.totalQuantity %>
-    </span><span id="urgent" class="image-clignote " style="color:red;font-size: 25px;display: none;"> • </span></i>
-</div>
 
 
-<<<<<<< HEAD
-<div id="ModalCheckOut" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content" style="width: 400px;">
-=======
   </div>
  
   <div class="chatbot__button scrollUp chatbutt"  >
@@ -103,7 +85,6 @@
         <i class="badge badge-warning fw-500" style="font-size: 19px;border: 1px solid orangered; font-weight: 800;"><span id="panier" class="paniero"  data-nbp="<%= locals.cart.totalQuantity %>">
          <%= locals.cart.totalQuantity %></span><span id="urgent" class="image-clignote " style="color:red;font-size: 25px;display: none;"> • </span></i> 
   </div>
->>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
     <span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
     <p> <span style="float: right;"> Rapyd-Checkout</span>
@@ -112,67 +93,30 @@
     </p>
 
 
-<<<<<<< HEAD
-    <div class="modal-body">
-      <!-- Feedback -->
-      <div class="row justify-content-center">
-        <div class="col text-center my-4" style="display: none" id="feedback">
-          <div class="support">
-            <img src="" id="image" alt="" height="120" class="mt-2">
-            <h3 id="title" class="my-4"></h3>
-            <p id="message"></p>
-            <a role="button" class="btn btn-custom mt-2" href="" id="action"></a>
-          </div>
-        </div>
-      </div>
-      <div class="" style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
-        <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
-      </div>
-
-
-=======
   <!-- Modal CheckOut -->
 
 <div id="ModalCheckOut" class="modal" style="z-index:77777777;">
-
-      
-        <div class="modal-content" style="">
->>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
-
+        <div class="modal-content" >
+          
+          <div  style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
+            <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
+          </div>
     </div>
   </div>
 </div>
 
 
 
-
-<<<<<<< HEAD
-=======
-            <div  style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
-              <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
-            </div>
->>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
-
-
-
-
-
 <!-- Modal Remind Action -->
 <div id="ModalFirstAdd" class="modal" style="display: none;">
 
-  <div class="modal-content" style="">
+  <div class="modal-content" >
 
   
    
 
     <div class="modal-body text-center " style="font-size: 19px;">
 
-<<<<<<< HEAD
-<script>
-  function urgencepanier() {
-    var nombrePanier = document.querySelector('.paniero').textContent;
-    var urgence = document.getElementById('urgent');
-=======
       <img src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" style="width: 50px;"/>
       
       <p><span id="typeW"> </span> <span id="typeW0" style='color: dodgerblue;' > </span> your Smart Agent, </p>
@@ -192,34 +136,16 @@
         </form>
       </div>
     
->>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
       </div>
 
-<<<<<<< HEAD
-    if (nombrePanier > 0) {
-
-      urgence.style.display = 'inline';
-
-    }
-  }
-  urgencepanier();
-
-  window.addEventListener("click", function (event) {
-
-    urgencepanier()
-  });
-
-
-</script>
-=======
   </div>
 </div>
 
 <!-- Modal Game -->
 <div id="ModalGame" class="modal" style="display: none;">
   
-  <div class="modal-content" style="">
+  <div class="modal-content" >
 
     <span onclick="GameNone()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
    
@@ -287,4 +213,3 @@
   <button onclick="GameBlock()" class="text-white" style="font-size: 19px;font-weight: bold;border-top-right-radius: 0px;">PLAY <span class="fa fa-gamepad text-white image-clignote"> </span></button>
 </div>
 
->>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
