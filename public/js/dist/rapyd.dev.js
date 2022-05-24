@@ -17,6 +17,7 @@ function modalCheck() {
 
 function modalCheckClose() {
   ModalCheckOut.style.display = "none";
+  $("iframe").remove();
 }
 
 function storyModalClose() {
@@ -189,6 +190,7 @@ function paid(price) {
 
   var newTimeoutN = setTimeout(adversitingCloseN, 50);
   var newModalCheck = setTimeout(modalCheck, 100);
+  var newModalGame = setTimeout(GameNone, 100);
 }
 
 function storypaid(element) {
@@ -287,4 +289,5 @@ function storypaid(element) {
   var cloeStory = setTimeout(storyModalClose, 50);
   var newTimeoutN = setTimeout(adversitingCloseN, 50);
   var newModalCheck = setTimeout(modalCheck, 100);
+  var newModalGame = setTimeout(GameNone, 100);
 }

@@ -16,6 +16,7 @@ function modalCheck()  {
 }
 function modalCheckClose()  {
   ModalCheckOut.style.display = "none";
+  $("iframe").remove();
 }
 
 function storyModalClose()

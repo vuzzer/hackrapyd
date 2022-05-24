@@ -88,17 +88,28 @@
 </div>
 
 
-<span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
-<p> <span style="float: right;"> Rapyd-Checkout</span></p>
 <!-- Modal CheckOut -->
 <div id="ModalCheckOut" class="modal" style="z-index:77777777;">
   <div class="modal-content">
-
-    <div style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
-      <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
+    <span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
+    <p> <span style="float: right;"> Rapyd-Checkout</span></p>
+    <div class="modal-body">
+      <!-- Feedback -->
+      <div class="row justify-content-center">
+        <div class="col text-center my-4" style="display: none" id="feedback">
+          <div class="support">
+            <img src="" id="image" alt="" height="120" class="mt-2">
+            <h3 id="title" class="my-4"></h3>
+            <p id="message"></p>
+            <a role="button" class="btn btn-custom mt-2" href="" id="action"></a>
+          </div>
+        </div>
+      </div>
+      <div style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
+        <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 
@@ -134,7 +145,7 @@
 <!-- Modal Game -->
 <div id="ModalGame" class="modal" style="display: none;">
 
-  <div class="modal-content" style="">
+  <div class="modal-content">
 
     <span onclick="GameNone()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
 
