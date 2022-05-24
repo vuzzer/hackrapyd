@@ -1,5 +1,15 @@
-<div class="col mb-5">
-  <div class="card h-100 div2" style="box-shadow: none;border: 1px solid rgba(2, 69, 5, 0.3);">
+<% const tab = ["fade-left","fade-up"];
+var animationNbr = Math.floor(Math.random() * 1);
+%>
+
+
+<div class="col mb-5 allAnimation" 
+      data-aos="<%= tab[animationNbr] %>"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="0"
+     data-aos-offset="0"
+     >
+  <div class="card h-100 div2 zoom"  >
     <!-- Product image-->
     <img
     

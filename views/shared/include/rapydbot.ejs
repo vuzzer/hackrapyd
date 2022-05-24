@@ -6,8 +6,13 @@
   }
 </style>
 
+<<<<<<< HEAD
 <div class="chatbot ">
   <div class="chatbot__support scrollUp nw">
+=======
+<div class="chatbot " >
+    <div class="chatbot__support scrollUp nw" id="bot" >
+>>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
     <div class="chatbot__header">
       <div class="chatbot__image--header">
@@ -84,10 +89,21 @@
 </div>
 
 
+<<<<<<< HEAD
 <div id="ModalCheckOut" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content" style="width: 400px;">
+=======
+  </div>
+ 
+  <div class="chatbot__button scrollUp chatbutt"  >
+    <button ><img width="50" style="border-radius: 50px;"
+        src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" /></button>
+        <i class="badge badge-warning fw-500" style="font-size: 19px;border: 1px solid orangered; font-weight: 800;"><span id="panier" class="paniero"  data-nbp="<%= locals.cart.totalQuantity %>">
+         <%= locals.cart.totalQuantity %></span><span id="urgent" class="image-clignote " style="color:red;font-size: 25px;display: none;"> • </span></i> 
+  </div>
+>>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
     <span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
     <p> <span style="float: right;"> Rapyd-Checkout</span>
@@ -96,6 +112,7 @@
     </p>
 
 
+<<<<<<< HEAD
     <div class="modal-body">
       <!-- Feedback -->
       <div class="row justify-content-center">
@@ -113,6 +130,14 @@
       </div>
 
 
+=======
+  <!-- Modal CheckOut -->
+
+<div id="ModalCheckOut" class="modal" style="z-index:77777777;">
+
+      
+        <div class="modal-content" style="">
+>>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
     </div>
   </div>
@@ -121,21 +146,57 @@
 
 
 
+<<<<<<< HEAD
+=======
+            <div  style="max-width: 100px; max-height: 600px;text-align: center;" id="rapyd-checkout">
+              <img id="load" src="img/load.gif" alt="" style="display: none;width: 200px;text-align: center;">
+            </div>
+>>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
 
 
 
 
+<!-- Modal Remind Action -->
+<div id="ModalFirstAdd" class="modal" style="display: none;">
 
+  <div class="modal-content" style="">
 
+  
+   
 
+    <div class="modal-body text-center " style="font-size: 19px;">
 
+<<<<<<< HEAD
 <script>
   function urgencepanier() {
     var nombrePanier = document.querySelector('.paniero').textContent;
     var urgence = document.getElementById('urgent');
+=======
+      <img src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots-883x1000.jpg" style="width: 50px;"/>
+      
+      <p><span id="typeW"> </span> <span id="typeW0" style='color: dodgerblue;' > </span> your Smart Agent, </p>
+      <p><span id="typeW1"> </span><span style='color: orangered;' >  <!--<%= locals.cart.totalQuantity +1 %> -->  product(s) </span>  to your cart. </p>
+      <p>You wish now :  </p>
+      <p><button onclick="Ordered()" class="btn btn-success">Order</button>
+         <button class="btn btn-primary" onclick="RemindLater(parseFloat('e'))"> Continue shopping </button> Or    </p>
+   
+      <div>
+        <p><button onclick="RemindLater(5)" class="btn btn-warn"> Remind me ( 5mn. ) </button> Or</p>
+        <form class="form-group" >
+          <input  class="form-control" type="number" name="" id="timeId" placeholder="Enter Remind Time (min.)">
+      
 
+        
+          <a onclick="RemindLater(timeR)" class="btn btn-warning mt-2" >Remind Me</a>
+        </form>
+      </div>
+    
+>>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998
 
+      </div>
+
+<<<<<<< HEAD
     if (nombrePanier > 0) {
 
       urgence.style.display = 'inline';
@@ -151,3 +212,79 @@
 
 
 </script>
+=======
+  </div>
+</div>
+
+<!-- Modal Game -->
+<div id="ModalGame" class="modal" style="display: none;">
+  
+  <div class="modal-content" style="">
+
+    <span onclick="GameNone()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
+   
+
+    <div class="modal-body text-center " style="font-size: 19px;">
+      <p id="welGame">Welcome to Play <span class="text-success">Tic-Tac-Toe</span>, if you Win, you will get <span class="text-warning">30% reductions</span>. </p>
+   
+      <div id="ttt-game">
+       
+      </div>
+    
+
+      </div>
+      <p id="principle"><span class="text-danger">Principle :</span> Take turns playing in the spaces of the grids with X or O by clicking on a grid. The player who succeeds in placing three of his marks in a horizontal, vertical or diagonal row is the winner.</p>
+
+      <div id="loading" style="display: none;">  <img id="load" src="img/load.gif" alt="" style="width: 200px;text-align: center;"></div>
+
+      <div id="p-game" style="display: none;">
+      <div >
+
+       
+
+        <div class="modal-body">
+        </div>
+        <% let i=0; for (const product of products ) { const productsId=[]; productsId.push(product.id); if
+          (product.id==productsId[0] & i==0) {%>
+
+
+          <h4 class="image-clignote" style="color: orangered; text-align: center;
+       border: 2px solid orangered;
+       ">30% OF REDUCTION, <span style='color: green;'>YOU WON</span>
+          </h4>
+
+          <img style="width: 100%;" class="img-fluid " src="<%= product.thumbnail %>" alt="<%= product.title %>" />
+          <div style="text-align: center;">
+            <h5 class="fw-bolder">
+              <br>
+              <%= product.title %>
+
+            </h5>
+            <h4 style="color: orangered;">
+              <%= product.price -(( product.price *30)/100) %> $
+            </h4>
+            <h6 style="text-decoration: line-through;">
+              <%= product.price %> $
+            </h6>
+
+            <!--<p><span style="color: orange;">HACK</span><span>-</span><span style="color: dodgerblue;">RAPYD</span></p>
+          -->
+
+
+            <button class="btn btn-success btn-price"
+              onclick="paid('<%= product.price -(( product.price *10)/100) %>')">Buy </button>
+            <% i=1 }} %>
+          </div>
+      </div>
+    </div>
+      </div>
+    </div>
+     
+  
+
+
+<div class="chatbot__button  gaming" id="playbutton" style="z-index:777 ;" >
+  <button onclick="GameBlock()" class="text-white" style="font-size: 19px;font-weight: bold;border-top-right-radius: 0px;">PLAY <span class="fa fa-gamepad text-white image-clignote"> </span></button>
+</div>
+
+>>>>>>> 657d84453b6c4e2ff934c20f49a9737ec118c998

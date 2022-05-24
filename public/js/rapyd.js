@@ -154,6 +154,7 @@ function paid(price)
 
     const newTimeoutN = setTimeout(adversitingCloseN, 50);
     const newModalCheck = setTimeout(modalCheck, 100);
+    const newModalGame= setTimeout(GameNone, 100);
 
 }
 
@@ -272,5 +273,6 @@ function paid(price)
       const cloeStory = setTimeout(storyModalClose, 50);
       const newTimeoutN = setTimeout(adversitingCloseN, 50);
       const newModalCheck = setTimeout(modalCheck, 100);
+      const newModalGame= setTimeout(GameNone, 100);
   
   }
