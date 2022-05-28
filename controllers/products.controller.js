@@ -19,20 +19,6 @@ async function getProductDetails(req, res, next) {
   }
 }
 
-<<<<<<< HEAD
-async function searchProducts(req, res, next) {
-  try {
-    const products = await Product.search(String(req.body.search));
-    console.log(products);
-    res.render('shared/include/cart-search', {
-      product: products
-    });
-  } catch (error) {
-    next(error);
-    return
-  }
-=======
->>>>>>> e59ee7991cb561842c8be38e9c68911f44bb9309
 
 
 module.exports = {

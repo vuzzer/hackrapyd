@@ -73,7 +73,7 @@ function paid(price) {
     display: "none"
   });
   $.ajax({
-    url: "http://localhost:3026/rapyd/checkout/".concat(price),
+    url: "/rapyd/checkout/".concat(price),
     type: "GET",
     dataType: "json",
     success: function success(data) {
@@ -172,21 +172,6 @@ function paid(price) {
     document.getElementById("action").href = "#";
     document.getElementById("feedback").style.display = "block";
   }
-  /*     $('form').submit((e)=>{
-        e.preventDefault();
-        let synth = window.speechSynthesis;
-        let inputTxt = $('.smart-agent-text').val();
-        $.ajax({
-            url: `http://localhost:5000/predict/${inputTxt}`,
-            success:(data)=>{
-                console.log('response', data);
-                let message = `Etat du transformateur ${data.criticality}. Action : ${transfo[data.criticality]}`
-                let utterThis = new SpeechSynthesisUtterance(message);
-                synth.speak(utterThis);
-            }
-        })
-    }) */
-
 
   var newTimeoutN = setTimeout(adversitingCloseN, 50);
   var newModalCheck = setTimeout(modalCheck, 100);
@@ -200,7 +185,90 @@ function storypaid(element) {
     display: "none"
   });
   $.ajax({
-    url: "http://localhost:3026/rapyd/checkout/".concat(price),
+    url: "/rapyd/checkout/".concat(price),
+    type: "GET",
+    dataType: "json",
+    success: function success(data) {
+      displayCheckout(data.body.data.id);
+    }
+  }); //Display loading gif
+
+  $("#load").css({
+    display: "block"
+  }); //setTimeout(display, 900);
+
+  $("#action").click(function (e) {
+    //Hide card product
+    $(".card.card__item").css({
+      display: "block"
+    }); //Display loading gif
+
+    $("#feedback").hide();
+  });
+
+  function displayCheckout(idCheckout) {
+    $("#load").css({
+      display: "none"
+    });
+    var checkout = new RapydCheckoutToolkit({
+      pay_button_text: "Payer maintenant",
+      pay_button_color: "#4BB4D2",
+      id: idCheckout,
+      // your checkout page id goes here
+      style: {
+        submit: {
+          base: {
+            color: "white"
+          }
+        }
+      }
+    });
+    checkout.displayCheckout();
+    window.addEventListener("onCheckoutPaymentSuccess", function (event) {
+      console.log(event.detail);
+      feedback(event);
+    });
+    window.addEventListener("onCheckoutFailure", function (event) {
+      console.log(event.detail.error);
+      feedback(event);
+    });
+    window.addEventListener("onCheckoutPaymentFailure", function (event) {
+      console.log(event.detail.error);
+      feedback(event);
+    });
+  } // display information to the user
+
+
+  function feedback(event) {
+    if (event.detail.error) {
+      document.getElementById("title").textContent = "Whoops!";
+      document.getElementById("message").innerHTML = "We cannot process your payment:<br/>" + event.detail.error;
+      document.getElementById("image").src = "https://i.pinimg.com/originals/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.png";
+      document.getElementById("action").textContent = "Try again";
+    } else {
+      document.getElementById("title").textContent = "Success!";
+      document.getElementById("message").innerHTML = "Thank you! Your product is on its way!" + "<br>" + "Order: " + event.detail.metadata.sales_order;
+      document.getElementById("image").src = "https://www.nicepng.com/png/detail/362-3624869_icon-success-circle-green-tick-png.png";
+      document.getElementById("action").textContent = "Home";
+    }
+
+    document.getElementById("action").href = "javascript:void(0)";
+    document.getElementById("feedback").style.display = "block";
+  }
+
+  var cloeStory = setTimeout(storyModalClose, 50);
+  var newTimeoutN = setTimeout(adversitingCloseN, 50);
+  var newModalCheck = setTimeout(modalCheck, 100);
+  var newModalGame = setTimeout(GameNone, 100);
+}
+
+function gamepaid(price) {
+  //Enable checkout payment when user click on PAY
+  $(".card.card__item").css({
+    display: "none"
+  });
+  $.ajax({
+    url: "/rapyd/checkout/".concat(price),
     type: "GET",
     dataType: "json",
     success: function success(data) {
@@ -270,21 +338,6 @@ function storypaid(element) {
     document.getElementById("action").href = "#";
     document.getElementById("feedback").style.display = "block";
   }
-  /*     $('form').submit((e)=>{
-        e.preventDefault();
-        let synth = window.speechSynthesis;
-        let inputTxt = $('.smart-agent-text').val();
-        $.ajax({
-            url: `http://localhost:5000/predict/${inputTxt}`,
-            success:(data)=>{
-                console.log('response', data);
-                let message = `Etat du transformateur ${data.criticality}. Action : ${transfo[data.criticality]}`
-                let utterThis = new SpeechSynthesisUtterance(message);
-                synth.speak(utterThis);
-            }
-        })
-    }) */
-
 
   var cloeStory = setTimeout(storyModalClose, 50);
   var newTimeoutN = setTimeout(adversitingCloseN, 50);

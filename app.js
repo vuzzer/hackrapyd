@@ -1,27 +1,20 @@
 const path = require('path');
 
 const express = require('express');
-const csrf = require('csurf');
 const expressSession = require('express-session');
 const logger = require('morgan');
 const createSessionConfig = require('./config/session');
-const addCsrfTokenMiddleware = require('./middlewares/csrf-token');
 const errorHandlerMiddleware = require('./middlewares/error-handler');
 const checkAuthStatusMiddleware = require('./middlewares/check-auth');
-const protectRoutesMiddleware = require('./middlewares/protect-routes');
 const cartMiddleware = require('./middlewares/cart');
 const updateCartPricesMiddleware = require('./middlewares/update-cart-prices');
 const notFoundMiddleware = require('./middlewares/not-found');
-const authRoutes = require('./routes/auth.routes');
 const productsRoutes = require('./routes/products.routes');
 const baseRoutes = require('./routes/base.routes');
-const adminRoutes = require('./routes/admin.routes');
 const cartRoutes = require('./routes/cart.routes');
-const ordersRoutes = require('./routes/orders.routes');
 const chatRoutes = require('./routes/chat.routes');
 const rapydRoutes = require('./routes/rapyd.routes');
 const db = require('./data/database');
-const dummyjson = require('./dummyjson/dummy-data');
 
 const app = express();
 
@@ -46,12 +39,10 @@ app.use(updateCartPricesMiddleware);
 app.use(checkAuthStatusMiddleware);
 
 app.use(baseRoutes);
-app.use(authRoutes);
 app.use(productsRoutes);
 app.use('/rapyd', rapydRoutes)
 app.use('/cart', cartRoutes);
-app.use('/orders', ordersRoutes);
-app.use('/admin', protectRoutesMiddleware, adminRoutes);
+
 
 //Chat
 app.use('/chat', chatRoutes);
@@ -63,7 +54,6 @@ app.use(errorHandlerMiddleware);
 db.connectToDatabase()
 .then(function () {
     console.log('connected to database');
-    //dummyjson.getAllProducts();
 })
 .catch(function (error) {
     console.log('Failed to connect to the database!');

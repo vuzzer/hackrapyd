@@ -51,7 +51,7 @@ function paid(price)
 
     $(".card.card__item").css({ display: "none" });
     $.ajax({
-      url: `http://localhost:3026/rapyd/checkout/${price}`,
+      url: `/rapyd/checkout/${price}`,
       type: "GET",
       dataType: "json",
       success: (data) => {
@@ -137,21 +137,6 @@ function paid(price)
     document.getElementById("feedback").style.display = "block";
   }
 
-  /*     $('form').submit((e)=>{
-        e.preventDefault();
-        let synth = window.speechSynthesis;
-        let inputTxt = $('.smart-agent-text').val();
-        $.ajax({
-            url: `http://localhost:5000/predict/${inputTxt}`,
-            success:(data)=>{
-                console.log('response', data);
-                let message = `Etat du transformateur ${data.criticality}. Action : ${transfo[data.criticality]}`
-                let utterThis = new SpeechSynthesisUtterance(message);
-                synth.speak(utterThis);
-            }
-        })
-    }) */
-
 
     const newTimeoutN = setTimeout(adversitingCloseN, 50);
     const newModalCheck = setTimeout(modalCheck, 100);
@@ -177,7 +162,7 @@ function paid(price)
       $(".card.card__item").css({ display: "none" });
   
       $.ajax({
-        url: `http://localhost:3026/rapyd/checkout/${price}`,
+        url: `/rapyd/checkout/${price}`,
         type: "GET",
         dataType: "json",
         success: (data) => {
@@ -256,21 +241,6 @@ function paid(price)
       document.getElementById("feedback").style.display = "block";
     }
   
-    /*     $('form').submit((e)=>{
-          e.preventDefault();
-          let synth = window.speechSynthesis;
-          let inputTxt = $('.smart-agent-text').val();
-          $.ajax({
-              url: `http://localhost:5000/predict/${inputTxt}`,
-              success:(data)=>{
-                  console.log('response', data);
-                  let message = `Etat du transformateur ${data.criticality}. Action : ${transfo[data.criticality]}`
-                  let utterThis = new SpeechSynthesisUtterance(message);
-                  synth.speak(utterThis);
-              }
-          })
-      }) */
-  
       const cloeStory = setTimeout(storyModalClose, 50);
       const newTimeoutN = setTimeout(adversitingCloseN, 50);
       const newModalCheck = setTimeout(modalCheck, 100);
@@ -295,7 +265,7 @@ function paid(price)
       $(".card.card__item").css({ display: "none" });
   
       $.ajax({
-        url: `http://localhost:3026/rapyd/checkout/${price}`,
+        url: `/rapyd/checkout/${price}`,
         type: "GET",
         dataType: "json",
         success: (data) => {
@@ -373,21 +343,6 @@ function paid(price)
       document.getElementById("action").href = "#";
       document.getElementById("feedback").style.display = "block";
     }
-  
-    /*     $('form').submit((e)=>{
-          e.preventDefault();
-          let synth = window.speechSynthesis;
-          let inputTxt = $('.smart-agent-text').val();
-          $.ajax({
-              url: `http://localhost:5000/predict/${inputTxt}`,
-              success:(data)=>{
-                  console.log('response', data);
-                  let message = `Etat du transformateur ${data.criticality}. Action : ${transfo[data.criticality]}`
-                  let utterThis = new SpeechSynthesisUtterance(message);
-                  synth.speak(utterThis);
-              }
-          })
-      }) */
   
       const cloeStory = setTimeout(storyModalClose, 50);
       const newTimeoutN = setTimeout(adversitingCloseN, 50);
