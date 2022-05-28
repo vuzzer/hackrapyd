@@ -224,7 +224,7 @@ function paid(price)
         document.getElementById("title").textContent = "Whoops!";
         document.getElementById("message").innerHTML =
           "We cannot process your payment:<br/>" + event.detail.error;
-        document.getElementById("image").src = "https://i.pinimg.com/originals/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.png";
+        document.getElementById("image").src = "/img/failure.png";
         document.getElementById("action").textContent = "Try again";
       } else {
         document.getElementById("title").textContent = "Success!";
@@ -233,11 +233,11 @@ function paid(price)
           "<br>" +
           "Payment: " +
           event.detail.id;
-        document.getElementById("image").src = "https://www.nicepng.com/png/detail/362-3624869_icon-success-circle-green-tick-png.png";
+        document.getElementById("image").src = "/img/success.png";
         document.getElementById("action").textContent = "Home";
       }
   
-      document.getElementById("action").href = "javascript:void(0)";
+      document.getElementById("action").href = "#";
       document.getElementById("feedback").style.display = "block";
     }
   
@@ -327,7 +327,7 @@ function paid(price)
         document.getElementById("title").textContent = "Whoops!";
         document.getElementById("message").innerHTML =
           "We cannot process your payment:<br/>" + event.detail.error;
-        document.getElementById("image").src = "img/no-bike.svg";
+        document.getElementById("image").src = "/img/failure.png";
         document.getElementById("action").textContent = "Try again";
       } else {
         document.getElementById("title").textContent = "Success!";
@@ -336,7 +336,7 @@ function paid(price)
           "<br>" +
           "Payment: " +
           event.detail.id;
-        document.getElementById("image").src = "img/logo.svg";
+        document.getElementById("image").src = "/img/success.png";
         document.getElementById("action").textContent = "Home";
       }
   
