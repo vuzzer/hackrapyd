@@ -78,7 +78,7 @@ function searchProducts(req, res, next) {
 
         case 3:
           products = _context3.sent;
-          res.status(201).json({
+          res.render('shared/include/cart-search', {
             product: products
           });
           _context3.next = 11;

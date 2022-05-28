@@ -7,7 +7,7 @@ async function searchProducts(product) {
           search: product
         }),
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/html',
         },
       });
     } catch (error) {
@@ -21,7 +21,7 @@ async function searchProducts(product) {
       return;
     } 
   
-    const responseData = await response.json();
+    const responseData = await response.text();
     console.log(responseData);
     document.getElementById('prodSeen').innerHTML=''
 }
