@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/dist/skins/facesnap.css">
   <link rel="stylesheet" href="/dist/skins/snapssenger.css">
 
-  <link rel="icon" type="image/x-icon" href="/images/navbar/logo.png" />
+  <link rel="icon" type="image/x-icon" href="/images/navbar/favicon.png" />
 
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
@@ -218,7 +218,7 @@ box-shadow: 5px 5px 15px -7px #cac8bd;
         <h5 class="font-weight-bold text-muted text-uppercase py-3 text-center mb-3">
           Products
         </h5>
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div id="prodSeen" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
           <% for (const product of products) { %>
             <%- include('../../shared/include/product-item' , {product: product}) %>
               <% } %>
@@ -507,7 +507,6 @@ box-shadow: 5px 5px 15px -7px #cac8bd;
         <script src="operator.js"></script>
 
         <script src="/scripts/cart-management.js"></script>
-        <script src="/scripts/searchProduct.js"></script>
 
         <!-- code to display the iframe RAPYD API -->
         <script src="https://sandboxcheckouttoolkit.rapyd.net"></script>

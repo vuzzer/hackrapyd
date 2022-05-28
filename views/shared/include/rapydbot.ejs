@@ -90,7 +90,7 @@
 
 <!-- Modal CheckOut -->
 <div id="ModalCheckOut" class="modal" style="z-index:77777777;">
-  <div class="modal-content">
+  <div class="modal-content" style="width: 60%;height: 80%;">
     <span onclick="modalCheckClose()" class="f-left" style="font-size: 25px;cursor: pointer;">&times; </span>
     <p> <span style="float: right;"> Rapyd-Checkout</span></p>
     <div class="modal-body">
@@ -101,7 +101,7 @@
             <img src="" id="image" alt="" height="120" class="mt-2">
             <h3 id="title" class="my-4"></h3>
             <p id="message"></p>
-            <a role="button" class="btn btn-custom mt-2" href="" id="action"></a>
+            <a role="button" onclick="modalCheckClose()" class="btn btn-custom mt-2" href="javascript:void(0)" id="action"></a>
           </div>
         </div>
       </div>
@@ -202,7 +202,7 @@
 
 
             <button class="btn btn-success btn-price"
-              onclick="paid('<%= product.price -(( product.price *10)/100) %>')">Buy </button>
+              onclick="gamepaid('<%= product.price -(( product.price *10)/100) %>')">Buy </button>
             <% i=1 }} %>
           </div>
       </div>
