@@ -22,7 +22,7 @@ async function getProductDetails(req, res, next) {
 async function searchProducts(req, res, next) {
   try {
     const products = await Product.search(req.body.search);
-    res.status(201).json({
+    res.render('shared/include/cart-search', {
       product: products
     });
   } catch (error) {

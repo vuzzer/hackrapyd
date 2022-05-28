@@ -14,7 +14,7 @@ function searchProducts(product) {
               search: product
             }),
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'text/html'
             }
           }));
 
@@ -40,7 +40,7 @@ function searchProducts(product) {
 
         case 13:
           _context.next = 15;
-          return regeneratorRuntime.awrap(response.json());
+          return regeneratorRuntime.awrap(response.text());
 
         case 15:
           responseData = _context.sent;
