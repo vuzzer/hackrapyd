@@ -17,11 +17,13 @@ async function searchProducts(product) {
   
     if (!response.ok) {
       alert('Something went wrong!');
+     
       return;
     } 
   
     const responseData = await response.json();
     console.log(responseData);
+    document.getElementById('prodSeen').innerHTML=''
 }
   
 $('#product-name').on({

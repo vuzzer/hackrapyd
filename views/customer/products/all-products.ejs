@@ -218,7 +218,7 @@ box-shadow: 5px 5px 15px -7px #cac8bd;
         <h5 class="font-weight-bold text-muted text-uppercase py-3 text-center mb-3">
           Products
         </h5>
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div id="prodSeen" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
           <% for (const product of products) { %>
             <%- include('../../shared/include/product-item' , {product: product}) %>
               <% } %>

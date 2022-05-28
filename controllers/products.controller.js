@@ -23,7 +23,7 @@ async function searchProducts(req, res, next) {
   try {
     const products = await Product.search(req.body.search);
     res.status(201).json({
-      product: products
+      product: res.render('<html></html>')
     });
   } catch (error) {
     next(error);
