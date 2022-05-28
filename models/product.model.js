@@ -114,6 +114,13 @@ class Product {
     const productId = new mongodb.ObjectId(this.id);
     return db.getDb().collection('products').deleteOne({ _id: productId });
   }
+
+  static async search(searchTerm) {
+    const products = await db.getDb().collection('products').find({ title: { $regex: new RegExp(searchTerm, 'i') } }).toArray();
+    return products.map(function (productDocument) {
+      return new Product(productDocument);
+    });
+  }
 }
 
 module.exports = Product;
