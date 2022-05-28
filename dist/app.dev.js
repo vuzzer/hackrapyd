@@ -30,6 +30,8 @@ var chatRoutes = require('./routes/chat.routes');
 
 var rapydRoutes = require('./routes/rapyd.routes');
 
+var ordersRoutes = require('./routes/orders.routes');
+
 var db = require('./data/database');
 
 var app = express();
@@ -52,11 +54,10 @@ app.use(checkAuthStatusMiddleware);
 app.use(baseRoutes);
 app.use(productsRoutes);
 app.use('/rapyd', rapydRoutes);
+app.use('/orders', ordersRoutes);
 app.use('/cart', cartRoutes); //Chat
 
 app.use('/chat', chatRoutes);
-app.use(notFoundMiddleware);
-app.use(errorHandlerMiddleware);
 db.connectToDatabase().then(function () {
   console.log('connected to database');
 })["catch"](function (error) {

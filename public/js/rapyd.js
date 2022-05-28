@@ -120,16 +120,16 @@ function paid(price)
       document.getElementById("title").textContent = "Whoops!";
       document.getElementById("message").innerHTML =
         "We cannot process your payment:<br/>" + event.detail.error;
-      document.getElementById("image").src = "img/no-bike.svg";
+      document.getElementById("image").src = "/img/failure.png";
       document.getElementById("action").textContent = "Try again";
     } else {
       document.getElementById("title").textContent = "Success!";
       document.getElementById("message").innerHTML =
         "Thank you! Your product is on its way!" +
         "<br>" +
-        "Order: " +
-        event.detail.metadata.sales_order;
-      document.getElementById("image").src = "img/logo.svg";
+        "Payment: " +
+        event.detail.id;
+      document.getElementById("image").src = "/img/success.png";
       document.getElementById("action").textContent = "Home";
     }
 
@@ -231,8 +231,8 @@ function paid(price)
         document.getElementById("message").innerHTML =
           "Thank you! Your product is on its way!" +
           "<br>" +
-          "Order: " +
-          event.detail.metadata.sales_order;
+          "Payment: " +
+          event.detail.id;
         document.getElementById("image").src = "https://www.nicepng.com/png/detail/362-3624869_icon-success-circle-green-tick-png.png";
         document.getElementById("action").textContent = "Home";
       }
@@ -334,8 +334,8 @@ function paid(price)
         document.getElementById("message").innerHTML =
           "Thank you! Your product is on its way!" +
           "<br>" +
-          "Order: " +
-          event.detail.metadata.sales_order;
+          "Payment: " +
+          event.detail.id;
         document.getElementById("image").src = "img/logo.svg";
         document.getElementById("action").textContent = "Home";
       }

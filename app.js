@@ -14,6 +14,7 @@ const baseRoutes = require('./routes/base.routes');
 const cartRoutes = require('./routes/cart.routes');
 const chatRoutes = require('./routes/chat.routes');
 const rapydRoutes = require('./routes/rapyd.routes');
+const ordersRoutes = require('./routes/orders.routes');
 const db = require('./data/database');
 
 const app = express();
@@ -41,15 +42,14 @@ app.use(checkAuthStatusMiddleware);
 app.use(baseRoutes);
 app.use(productsRoutes);
 app.use('/rapyd', rapydRoutes)
+app.use('/orders', ordersRoutes);
 app.use('/cart', cartRoutes);
 
 
 //Chat
 app.use('/chat', chatRoutes);
 
-app.use(notFoundMiddleware);
 
-app.use(errorHandlerMiddleware);
 
 db.connectToDatabase()
 .then(function () {
