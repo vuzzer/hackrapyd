@@ -74,28 +74,29 @@ function searchProducts(req, res, next) {
         case 0:
           _context3.prev = 0;
           _context3.next = 3;
-          return regeneratorRuntime.awrap(Product.search(req.body.search));
+          return regeneratorRuntime.awrap(Product.search(String(req.body.search)));
 
         case 3:
           products = _context3.sent;
+          console.log(products);
           res.render('shared/include/cart-search', {
             product: products
           });
-          _context3.next = 11;
+          _context3.next = 12;
           break;
 
-        case 7:
-          _context3.prev = 7;
+        case 8:
+          _context3.prev = 8;
           _context3.t0 = _context3["catch"](0);
           next(_context3.t0);
           return _context3.abrupt("return");
 
-        case 11:
+        case 12:
         case "end":
           return _context3.stop();
       }
     }
-  }, null, null, [[0, 7]]);
+  }, null, null, [[0, 8]]);
 }
 
 module.exports = {

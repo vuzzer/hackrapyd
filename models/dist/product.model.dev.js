@@ -218,8 +218,8 @@ function () {
             case 0:
               _context5.next = 2;
               return regeneratorRuntime.awrap(db.getDb().collection('products').find({
-                title: {
-                  $regex: new RegExp(searchTerm, 'i')
+                $text: {
+                  $search: searchTerm
                 }
               }).toArray());
 

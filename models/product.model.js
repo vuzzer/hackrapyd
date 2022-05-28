@@ -116,7 +116,7 @@ class Product {
   }
 
   static async search(searchTerm) {
-    const products = await db.getDb().collection('products').find({ title: { $regex: new RegExp(searchTerm, 'i') } }).toArray();
+    const products = await db.getDb().collection('products').find({ $text: { $search: searchTerm } }).toArray();
     return products.map(function (productDocument) {
       return new Product(productDocument);
     });
