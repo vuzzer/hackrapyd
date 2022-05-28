@@ -19,7 +19,21 @@ async function getProductDetails(req, res, next) {
   }
 }
 
+async function searchProducts(req, res, next) {
+  try {
+    const products = await Product.search(req.body.search);
+    res.status(201).json({
+      product: products
+    });
+  } catch (error) {
+    next(error);
+    return
+  }
+
+}
+
 module.exports = {
   getAllProducts: getAllProducts,
+  searchProducts: searchProducts,
   getProductDetails: getProductDetails
 };
