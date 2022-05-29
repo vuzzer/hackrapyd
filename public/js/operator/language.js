@@ -168,7 +168,7 @@ class Language {
         setTimeout(() => {
           //Delete typing
           $("div.message__item--typing").remove();
-          let operator = `<div class="message__item message__item--operator">commande n'est pas reconnu.</div>`;
+          let operator = `<div class="message__item message__item--operator">I am in the learning phase, I want you to suggest the items in your baskets for purchase.</div>`;
           $(operator)
             .hide()
             .appendTo(".chatbot__messages div.support")
@@ -701,43 +701,6 @@ class Language {
         index = index + 1;
         this.recursive_display(consumer, index, color, poste); 
         }
-
-     /* else if ((this.geographic_area.fposte === consumer[index].id_poste.split(".")[0].substr(2, 3) || this.geographic_area.fposte
-       === "0") && (this.geographic_area.fzon === consumer[index].id_poste.split(".")[1] || this.geographic_area.fzon === "0") && (this.geographic_area.fexp === consumer[index].id_poste.split(".")[2] || this.geographic_area.fexp === "0") ) {
-          if (consumer[index].id_poste !== undefined) {
-            console.log(`consumer : ${consumer.length} index : ${index}`);
-            let operator = `<div class="message__item message__item--operator">
-                                                <strong style="color:${color};">Source d'info:${consumer[index].id_poste}</strong><br/>
-                                                <hr>
-                                                <br/>
-                                                <strong>Alarme: </strong>${consumer[index].description_mesure}<br/>
-                                                <strong>Libelle: </strong>${consumer[index].libelle_alerte}<br/>
-                                                <strong>Date: </strong>${consumer[index].date_heure_mesure}<br/>
-                                                <br/>
-                                                <strong style="color:red;">Proposition de causes</strong><br/>
-                                                <hr>
-                                                CM R${poste} ${this.getRandomInt()}<br/>
-                                                CM R${poste}  ${this.getRandomInt()}<br/>
-                                                CM R${poste}  ${this.getRandomInt()}<br/>
-                                                <br/>
-                                                <strong style="color:blue;">Proposition d'actions</strong><br/>
-                                                <hr>
-                                                ACT R${poste}  ${this.getRandomInt()}<br/>
-                                                ACT R${poste}  ${this.getRandomInt()}<br/>
-                                                ACT R${poste}  ${this.getRandomInt()}<br/>
-                                                </div>`;
-            $(operator)
-              .hide()
-              .appendTo(".chatbot__messages div.support")
-              .slideDown(0);
-            //ScrollToBottom
-            this.scrollToBottom();
-          }
-
-          index = index + 1;
-          this.recursive_display(consumer, index, color, poste);
-        
-        }*/
     }
   }
 

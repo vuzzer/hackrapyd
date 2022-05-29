@@ -2,9 +2,9 @@
 
 class BotSocket{
     constructor(){
-        /* this.socket = null;
+        this.socket = null;
         try{
-            this.socket = io('http://10.10.0.200:9000', {
+            this.socket = io( {
                 reconnection: false
             } )
         }
@@ -17,7 +17,7 @@ class BotSocket{
     //Client disconnect
     this.socket.on("disconnect", ()=>{
     console.log(`client ${this.socket.id} disconnect`)
-    }) */
+    })
     }
 }
 

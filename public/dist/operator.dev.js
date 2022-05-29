@@ -72,14 +72,6 @@ function operator() {
           position_to_listen["fposte"] = null;
           position_to_listen[content[0]] = content[content.length - 1];
         } else {
-          /* if (position_to_listen.fzon === null && (position_to_listen.fposte !== null || position_to_listen.ftou !== null)) {
-                        $(operator__writing).hide().appendTo(".chatbot__messages div.support").slideDown(400);
-                        setTimeout(() => {
-                            $("div.message__item--typing").remove();
-                            let operator = `<div class="message__item message__item--operator">Veuillez d'abord préciser une zone.</div>`
-                            $(operator).hide().appendTo('.chatbot__messages div.support').slideDown(400);
-                        }, 2000)
-                    } */
           //Don't conserve incorrect instruction
           if (language.geographic_area.fexp === null) {
             position_to_listen["fexp"] = null;

@@ -76,7 +76,7 @@ function paid(price)
     $("#load").css({ display: "none" });
 
     let checkout = new RapydCheckoutToolkit({
-      pay_button_text: "Payer maintenant",
+      pay_button_text: "Buy Now",
       pay_button_color: "#4BB4D2",
       id: idCheckout, // your checkout page id goes here
       style: {
@@ -191,7 +191,7 @@ function paid(price)
       $("#load").css({ display: "none" });
   
       let checkout = new RapydCheckoutToolkit({
-        pay_button_text: "Payer maintenant",
+        pay_button_text: "Buy Now",
         pay_button_color: "#4BB4D2",
         id: idCheckout, // your checkout page id goes here
         style: {
@@ -294,7 +294,7 @@ function paid(price)
       $("#load").css({ display: "none" });
   
       let checkout = new RapydCheckoutToolkit({
-        pay_button_text: "Payer maintenant",
+        pay_button_text: "Buy Now",
         pay_button_color: "#4BB4D2",
         id: idCheckout, // your checkout page id goes here
         style: {
